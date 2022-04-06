@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1396.868" height="214.668" viewBox="0 0 1396.868 214.668">
+  <g id="google-login" transform="translate(-201.566 -732.766)">
+    <path id="Path_6508" data-name="Path 6508" d="M1541.3,947H258.7A56.719,56.719,0,0,1,202,890.3V789.9a56.719,56.719,0,0,1,56.7-56.7H1541.3a56.719,56.719,0,0,1,56.7,56.7V890.3A56.719,56.719,0,0,1,1541.3,947Z" fill="#fff" stroke="#c7c6c6" stroke-miterlimit="10" stroke-width="0.868"/>
+    <g id="Group_11003" data-name="Group 11003">
+      <text id="Sign_in_with_Google" data-name="Sign in with Google" transform="translate(645.688 861.354)" fill="#020203" font-size="67.07" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Sign in with Google</tspan></text>
+    </g>
+    <g id="Group_11004" data-name="Group 11004">
+      <path id="Path_6509" data-name="Path 6509" d="M363.5,841.4a47.763,47.763,0,0,0-1.2-11.3H310.5v20.5h30.4c-.6,5.1-3.9,12.7-11.3,17.9l-.1.7,16.4,12.7,1.1.1c10.5-9.6,16.5-23.8,16.5-40.6" fill="#4877bb"/>
+      <path id="Path_6510" data-name="Path 6510" d="M310.5,895.4c14.9,0,27.4-4.9,36.5-13.4l-17.4-13.5a33.814,33.814,0,0,1-50.5-17.4l-.6.1-17,13.2-.2.6a55.042,55.042,0,0,0,49.2,30.4" fill="#21a849"/>
+      <path id="Path_6511" data-name="Path 6511" d="M279.1,851.1a32.8,32.8,0,0,1-1.8-10.9,35.572,35.572,0,0,1,1.8-10.9v-.7l-17.2-13.4-.6.3a55.933,55.933,0,0,0-5.9,24.8,54.617,54.617,0,0,0,5.9,24.8l17.8-14" fill="#fbba10"/>
+      <path id="Path_6512" data-name="Path 6512" d="M310.5,806.4a30.612,30.612,0,0,1,21.3,8.2l15.6-15.2a52.975,52.975,0,0,0-36.9-14.3,55.194,55.194,0,0,0-49.3,30.4L279,829.4c4.6-13.4,16.9-23,31.5-23" fill="#e73830"/>
+    </g>
+  </g>
+</svg>

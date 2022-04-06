@@ -1,0 +1,3119 @@
+<html lang="en">
+    <script async="" src="https://buttons-config.sharethis.com/js/6193943d03623200125f69bb.js"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>( function () { window[ '_docs_annotate_canvas_by_ext' ] = 'kohfgcgbkjodfcfkcackpagifgbcmimk'; } )();</script>
+
+    <head>
+        <style type="text/css">
+            .swal-icon--error {
+                border-color: #f27474;
+                -webkit-animation: animateErrorIcon .5s;
+                animation: animateErrorIcon .5s
+            }
+
+            .swal-icon--error__x-mark {
+                position: relative;
+                display: block;
+                -webkit-animation: animateXMark .5s;
+                animation: animateXMark .5s
+            }
+
+            .swal-icon--error__line {
+                position: absolute;
+                height: 5px;
+                width: 47px;
+                background-color: #f27474;
+                display: block;
+                top: 37px;
+                border-radius: 2px
+            }
+
+            .swal-icon--error__line--left {
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                left: 17px
+            }
+
+            .swal-icon--error__line--right {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                right: 16px
+            }
+
+            @-webkit-keyframes animateErrorIcon {
+                0% {
+                    -webkit-transform: rotateX(100deg);
+                    transform: rotateX(100deg);
+                    opacity: 0
+                }
+
+                to {
+                    -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+                    opacity: 1
+                }
+            }
+
+            @keyframes animateErrorIcon {
+                0% {
+                    -webkit-transform: rotateX(100deg);
+                    transform: rotateX(100deg);
+                    opacity: 0
+                }
+
+                to {
+                    -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+                    opacity: 1
+                }
+            }
+
+            @-webkit-keyframes animateXMark {
+                0% {
+                    -webkit-transform: scale(.4);
+                    transform: scale(.4);
+                    margin-top: 26px;
+                    opacity: 0
+                }
+
+                50% {
+                    -webkit-transform: scale(.4);
+                    transform: scale(.4);
+                    margin-top: 26px;
+                    opacity: 0
+                }
+
+                80% {
+                    -webkit-transform: scale(1.15);
+                    transform: scale(1.15);
+                    margin-top: -6px
+                }
+
+                to {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    margin-top: 0;
+                    opacity: 1
+                }
+            }
+
+            @keyframes animateXMark {
+                0% {
+                    -webkit-transform: scale(.4);
+                    transform: scale(.4);
+                    margin-top: 26px;
+                    opacity: 0
+                }
+
+                50% {
+                    -webkit-transform: scale(.4);
+                    transform: scale(.4);
+                    margin-top: 26px;
+                    opacity: 0
+                }
+
+                80% {
+                    -webkit-transform: scale(1.15);
+                    transform: scale(1.15);
+                    margin-top: -6px
+                }
+
+                to {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    margin-top: 0;
+                    opacity: 1
+                }
+            }
+
+            .swal-icon--warning {
+                border-color: #f8bb86;
+                -webkit-animation: pulseWarning .75s infinite alternate;
+                animation: pulseWarning .75s infinite alternate
+            }
+
+            .swal-icon--warning__body {
+                width: 5px;
+                height: 47px;
+                top: 10px;
+                border-radius: 2px;
+                margin-left: -2px
+            }
+
+            .swal-icon--warning__body,
+            .swal-icon--warning__dot {
+                position: absolute;
+                left: 50%;
+                background-color: #f8bb86
+            }
+
+            .swal-icon--warning__dot {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                margin-left: -4px;
+                bottom: -11px
+            }
+
+            @-webkit-keyframes pulseWarning {
+                0% {
+                    border-color: #f8d486
+                }
+
+                to {
+                    border-color: #f8bb86
+                }
+            }
+
+            @keyframes pulseWarning {
+                0% {
+                    border-color: #f8d486
+                }
+
+                to {
+                    border-color: #f8bb86
+                }
+            }
+
+            .swal-icon--success {
+                border-color: #a5dc86
+            }
+
+            .swal-icon--success:after,
+            .swal-icon--success:before {
+                content: "";
+                border-radius: 50%;
+                position: absolute;
+                width: 60px;
+                height: 120px;
+                background: #fff;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg)
+            }
+
+            .swal-icon--success:before {
+                border-radius: 120px 0 0 120px;
+                top: -7px;
+                left: -33px;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transform-origin: 60px 60px;
+                transform-origin: 60px 60px
+            }
+
+            .swal-icon--success:after {
+                border-radius: 0 120px 120px 0;
+                top: -11px;
+                left: 30px;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-transform-origin: 0 60px;
+                transform-origin: 0 60px;
+                -webkit-animation: rotatePlaceholder 4.25s ease-in;
+                animation: rotatePlaceholder 4.25s ease-in
+            }
+
+            .swal-icon--success__ring {
+                width: 80px;
+                height: 80px;
+                border: 4px solid hsla(98, 55%, 69%, .2);
+                border-radius: 50%;
+                box-sizing: content-box;
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                z-index: 2
+            }
+
+            .swal-icon--success__hide-corners {
+                width: 5px;
+                height: 90px;
+                background-color: #fff;
+                padding: 1px;
+                position: absolute;
+                left: 28px;
+                top: 8px;
+                z-index: 1;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg)
+            }
+
+            .swal-icon--success__line {
+                height: 5px;
+                background-color: #a5dc86;
+                display: block;
+                border-radius: 2px;
+                position: absolute;
+                z-index: 2
+            }
+
+            .swal-icon--success__line--tip {
+                width: 25px;
+                left: 14px;
+                top: 46px;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-animation: animateSuccessTip .75s;
+                animation: animateSuccessTip .75s
+            }
+
+            .swal-icon--success__line--long {
+                width: 47px;
+                right: 8px;
+                top: 38px;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-animation: animateSuccessLong .75s;
+                animation: animateSuccessLong .75s
+            }
+
+            @-webkit-keyframes rotatePlaceholder {
+                0% {
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg)
+                }
+
+                5% {
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg)
+                }
+
+                12% {
+                    -webkit-transform: rotate(-405deg);
+                    transform: rotate(-405deg)
+                }
+
+                to {
+                    -webkit-transform: rotate(-405deg);
+                    transform: rotate(-405deg)
+                }
+            }
+
+            @keyframes rotatePlaceholder {
+                0% {
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg)
+                }
+
+                5% {
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg)
+                }
+
+                12% {
+                    -webkit-transform: rotate(-405deg);
+                    transform: rotate(-405deg)
+                }
+
+                to {
+                    -webkit-transform: rotate(-405deg);
+                    transform: rotate(-405deg)
+                }
+            }
+
+            @-webkit-keyframes animateSuccessTip {
+                0% {
+                    width: 0;
+                    left: 1px;
+                    top: 19px
+                }
+
+                54% {
+                    width: 0;
+                    left: 1px;
+                    top: 19px
+                }
+
+                70% {
+                    width: 50px;
+                    left: -8px;
+                    top: 37px
+                }
+
+                84% {
+                    width: 17px;
+                    left: 21px;
+                    top: 48px
+                }
+
+                to {
+                    width: 25px;
+                    left: 14px;
+                    top: 45px
+                }
+            }
+
+            @keyframes animateSuccessTip {
+                0% {
+                    width: 0;
+                    left: 1px;
+                    top: 19px
+                }
+
+                54% {
+                    width: 0;
+                    left: 1px;
+                    top: 19px
+                }
+
+                70% {
+                    width: 50px;
+                    left: -8px;
+                    top: 37px
+                }
+
+                84% {
+                    width: 17px;
+                    left: 21px;
+                    top: 48px
+                }
+
+                to {
+                    width: 25px;
+                    left: 14px;
+                    top: 45px
+                }
+            }
+
+            @-webkit-keyframes animateSuccessLong {
+                0% {
+                    width: 0;
+                    right: 46px;
+                    top: 54px
+                }
+
+                65% {
+                    width: 0;
+                    right: 46px;
+                    top: 54px
+                }
+
+                84% {
+                    width: 55px;
+                    right: 0;
+                    top: 35px
+                }
+
+                to {
+                    width: 47px;
+                    right: 8px;
+                    top: 38px
+                }
+            }
+
+            @keyframes animateSuccessLong {
+                0% {
+                    width: 0;
+                    right: 46px;
+                    top: 54px
+                }
+
+                65% {
+                    width: 0;
+                    right: 46px;
+                    top: 54px
+                }
+
+                84% {
+                    width: 55px;
+                    right: 0;
+                    top: 35px
+                }
+
+                to {
+                    width: 47px;
+                    right: 8px;
+                    top: 38px
+                }
+            }
+
+            .swal-icon--info {
+                border-color: #c9dae1
+            }
+
+            .swal-icon--info:before {
+                width: 5px;
+                height: 29px;
+                bottom: 17px;
+                border-radius: 2px;
+                margin-left: -2px
+            }
+
+            .swal-icon--info:after,
+            .swal-icon--info:before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                background-color: #c9dae1
+            }
+
+            .swal-icon--info:after {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                margin-left: -3px;
+                top: 19px
+            }
+
+            .swal-icon {
+                width: 80px;
+                height: 80px;
+                border-width: 4px;
+                border-style: solid;
+                border-radius: 50%;
+                padding: 0;
+                position: relative;
+                box-sizing: content-box;
+                margin: 20px auto
+            }
+
+            .swal-icon:first-child {
+                margin-top: 32px
+            }
+
+            .swal-icon--custom {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                border: none;
+                border-radius: 0
+            }
+
+            .swal-icon img {
+                max-width: 100%;
+                max-height: 100%
+            }
+
+            .swal-title {
+                color: rgba(0, 0, 0, .65);
+                font-weight: 600;
+                text-transform: none;
+                position: relative;
+                display: block;
+                padding: 13px 16px;
+                font-size: 27px;
+                line-height: normal;
+                text-align: center;
+                margin-bottom: 0
+            }
+
+            .swal-title:first-child {
+                margin-top: 26px
+            }
+
+            .swal-title:not(:first-child) {
+                padding-bottom: 0
+            }
+
+            .swal-title:not(:last-child) {
+                margin-bottom: 13px
+            }
+
+            .swal-text {
+                font-size: 16px;
+                position: relative;
+                float: none;
+                line-height: normal;
+                vertical-align: top;
+                text-align: left;
+                display: inline-block;
+                margin: 0;
+                padding: 0 10px;
+                font-weight: 400;
+                color: rgba(0, 0, 0, .64);
+                max-width: calc(100% - 20px);
+                overflow-wrap: break-word;
+                box-sizing: border-box
+            }
+
+            .swal-text:first-child {
+                margin-top: 45px
+            }
+
+            .swal-text:last-child {
+                margin-bottom: 45px
+            }
+
+            .swal-footer {
+                text-align: right;
+                padding-top: 13px;
+                margin-top: 13px;
+                padding: 13px 16px;
+                border-radius: inherit;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0
+            }
+
+            .swal-button-container {
+                margin: 5px;
+                display: inline-block;
+                position: relative
+            }
+
+            .swal-button {
+                background-color: #7cd1f9;
+                color: #fff;
+                border: none;
+                box-shadow: none;
+                border-radius: 5px;
+                font-weight: 600;
+                font-size: 14px;
+                padding: 10px 24px;
+                margin: 0;
+                cursor: pointer
+            }
+
+            .swal-button:not([disabled]):hover {
+                background-color: #78cbf2
+            }
+
+            .swal-button:active {
+                background-color: #70bce0
+            }
+
+            .swal-button:focus {
+                outline: none;
+                box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, .29)
+            }
+
+            .swal-button[disabled] {
+                opacity: .5;
+                cursor: default
+            }
+
+            .swal-button::-moz-focus-inner {
+                border: 0
+            }
+
+            .swal-button--cancel {
+                color: #555;
+                background-color: #efefef
+            }
+
+            .swal-button--cancel:not([disabled]):hover {
+                background-color: #e8e8e8
+            }
+
+            .swal-button--cancel:active {
+                background-color: #d7d7d7
+            }
+
+            .swal-button--cancel:focus {
+                box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, .29)
+            }
+
+            .swal-button--danger {
+                background-color: #e64942
+            }
+
+            .swal-button--danger:not([disabled]):hover {
+                background-color: #df4740
+            }
+
+            .swal-button--danger:active {
+                background-color: #cf423b
+            }
+
+            .swal-button--danger:focus {
+                box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, .29)
+            }
+
+            .swal-content {
+                padding: 0 20px;
+                margin-top: 20px;
+                font-size: medium
+            }
+
+            .swal-content:last-child {
+                margin-bottom: 20px
+            }
+
+            .swal-content__input,
+            .swal-content__textarea {
+                -webkit-appearance: none;
+                background-color: #fff;
+                border: none;
+                font-size: 14px;
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                border: 1px solid rgba(0, 0, 0, .14);
+                padding: 10px 13px;
+                border-radius: 2px;
+                transition: border-color .2s
+            }
+
+            .swal-content__input:focus,
+            .swal-content__textarea:focus {
+                outline: none;
+                border-color: #6db8ff
+            }
+
+            .swal-content__textarea {
+                resize: vertical
+            }
+
+            .swal-button--loading {
+                color: transparent
+            }
+
+            .swal-button--loading~.swal-button__loader {
+                opacity: 1
+            }
+
+            .swal-button__loader {
+                position: absolute;
+                height: auto;
+                width: 43px;
+                z-index: 2;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+                text-align: center;
+                pointer-events: none;
+                opacity: 0
+            }
+
+            .swal-button__loader div {
+                display: inline-block;
+                float: none;
+                vertical-align: baseline;
+                width: 9px;
+                height: 9px;
+                padding: 0;
+                border: none;
+                margin: 2px;
+                opacity: .4;
+                border-radius: 7px;
+                background-color: hsla(0, 0%, 100%, .9);
+                transition: background .2s;
+                -webkit-animation: swal-loading-anim 1s infinite;
+                animation: swal-loading-anim 1s infinite
+            }
+
+            .swal-button__loader div:nth-child(3n+2) {
+                -webkit-animation-delay: .15s;
+                animation-delay: .15s
+            }
+
+            .swal-button__loader div:nth-child(3n+3) {
+                -webkit-animation-delay: .3s;
+                animation-delay: .3s
+            }
+
+            @-webkit-keyframes swal-loading-anim {
+                0% {
+                    opacity: .4
+                }
+
+                20% {
+                    opacity: .4
+                }
+
+                50% {
+                    opacity: 1
+                }
+
+                to {
+                    opacity: .4
+                }
+            }
+
+            @keyframes swal-loading-anim {
+                0% {
+                    opacity: .4
+                }
+
+                20% {
+                    opacity: .4
+                }
+
+                50% {
+                    opacity: 1
+                }
+
+                to {
+                    opacity: .4
+                }
+            }
+
+            .swal-overlay {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-size: 0;
+                overflow-y: auto;
+                background-color: rgba(0, 0, 0, .4);
+                z-index: 10000;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity .3s
+            }
+
+            .swal-overlay:before {
+                content: " ";
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%
+            }
+
+            .swal-overlay--show-modal {
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            .swal-overlay--show-modal .swal-modal {
+                opacity: 1;
+                pointer-events: auto;
+                box-sizing: border-box;
+                -webkit-animation: showSweetAlert .3s;
+                animation: showSweetAlert .3s;
+                will-change: transform
+            }
+
+            .swal-modal {
+                width: 478px;
+                opacity: 0;
+                pointer-events: none;
+                background-color: #fff;
+                text-align: center;
+                border-radius: 5px;
+                position: static;
+                margin: 20px auto;
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+                z-index: 10001;
+                transition: opacity .2s, -webkit-transform .3s;
+                transition: transform .3s, opacity .2s;
+                transition: transform .3s, opacity .2s, -webkit-transform .3s
+            }
+
+            @media (max-width:500px) {
+                .swal-modal {
+                    width: calc(100% - 20px)
+                }
+            }
+
+            @-webkit-keyframes showSweetAlert {
+                0% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1)
+                }
+
+                1% {
+                    -webkit-transform: scale(.5);
+                    transform: scale(.5)
+                }
+
+                45% {
+                    -webkit-transform: scale(1.05);
+                    transform: scale(1.05)
+                }
+
+                80% {
+                    -webkit-transform: scale(.95);
+                    transform: scale(.95)
+                }
+
+                to {
+                    -webkit-transform: scale(1);
+                    transform: scale(1)
+                }
+            }
+
+            @keyframes showSweetAlert {
+                0% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1)
+                }
+
+                1% {
+                    -webkit-transform: scale(.5);
+                    transform: scale(.5)
+                }
+
+                45% {
+                    -webkit-transform: scale(1.05);
+                    transform: scale(1.05)
+                }
+
+                80% {
+                    -webkit-transform: scale(.95);
+                    transform: scale(.95)
+                }
+
+                to {
+                    -webkit-transform: scale(1);
+                    transform: scale(1)
+                }
+            }
+
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="ADV5DA5rwpBhjNx4DQurT4Ae0Ph1KRfodrwDdZ6O">
+        <!--<link rel="icon" href="https://Kbiafiling.in/image/Kbiafiling-Logo.png" sizes="192x192" />-->
+        <link rel="apple-touch-icon" href="">
+        <meta name="msapplication-TileImage" content="">
+        <title>Kbiafiling | India’s most trusted Tax filing service
+        </title>
+        <meta content="Kbiafiling | India’s most trusted Tax filing service" name="title">
+        <meta content="Kbiafiling intuitive platform offers a wide range of
+services in the tax and regulatory space to clients in India. Kbiafiling leverages technology to
+bring expert advice to taxpayers at reasonable cost." name="description">
+
+        <meta name="keywords" content="Kbiafiling, India, Indian Taxes, Taxes, Free, Efiling, Efiling Taxes,
+Efiling Taxes in India, Free Efiling Taxes in India, Tax registration, Fastest way to efile,
+Kbiafiling, Kbiafiling e-filing, GST, ITR-3, ITR-4, ITR-5, ITR-6, ITR-4S, Filing Income Tax Returns in
+India, Financial accounting, ITR, Saral, Digital Signatures, Public Provident Fund, PPF">
+
+
+
+        <meta name="author" content="Kbiafiling">
+        <meta name="copyright" content="Future Marketers (c) 2021">
+        <meta property="og:title" content="Kbiafiling | India’s most trusted Tax filing service">
+        <meta property="og:type" content="video.movie">
+        <meta property="og:url" content="https://Kbiafiling.in/">
+        <meta property="og:image" content="https://Kbiafiling.in/image/Kbiafiling-Logo.png">
+        <meta name="google-site-verification" content="yBC2rPvnFZ1BKQVxLluXrZmTnpZf_jUxPMC1v01pcFk">
+        <!-- Scripts -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1">
+        <script src="https://Kbiafiling.in/js/app.js"></script>
+
+        <!--favicon -->
+
+        <link rel="apple-touch-icon" sizes="57x57" href="https://Kbiafiling.in/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="https://Kbiafiling.in/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="https://Kbiafiling.in/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="https://Kbiafiling.in/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="https://Kbiafiling.in/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="https://Kbiafiling.in/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="https://Kbiafiling.in/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="https://Kbiafiling.in/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://Kbiafiling.in/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="https://Kbiafiling.in/fevicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://Kbiafiling.in/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="https://Kbiafiling.in/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://Kbiafiling.in/favicon/favicon-16x16.png">
+        <link rel="manifest" href="https://Kbiafiling.in/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="https://Kbiafiling.in/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://Kbiafiling.in/css/app.css">
+        <link href="https://Kbiafiling.in/css/stylenew.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://Kbiafiling.in/css/animate.css">
+        <link href="https://Kbiafiling.in/css/owl.carousel.min.css" rel="stylesheet">
+        <link href="https://Kbiafiling.in/css/owl.theme.default.min.css" rel="stylesheet">
+        <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+
+
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-212841437-1"></script>
+
+
+
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "Kbiafiling",
+  "image": "https://Kbiafiling.in/image/newlogo.svg",
+  "@id": "",
+  "url": "https://Kbiafiling.in/",
+  "telephone": "8466860093",
+  "priceRange": "1000-5000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kbiafiling, 7th floor, Room No. 1, 10 Clive row, Rampuria Chambers",
+    "addressLocality": "Kolkata",
+    "postalCode": "700001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 22.5773478,
+    "longitude": 88.34994809999999
+  } ,
+  "sameAs": [
+    "https://www.facebook.com/search/top?q=Kbiafiling",
+    "https://twitter.com/FTaxtic",
+    "https://www.instagram.com/Kbiafiling.in/"
+  ] 
+}
+</script>
+
+
+
+        <script type="text/javascript"
+            src="https://platform-api.sharethis.com/js/sharethis.js#property=6193943d03623200125f69bb&amp;product=inline-share-buttons"
+            async="async"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push( arguments ); }
+            gtag( 'js', new Date() );
+
+            gtag( 'config', 'UA-212841437-1' );
+        </script>
+
+        <style>
+            .badge-secondary {
+                color: #fff;
+                background-color: #6c757d;
+                font-size: 12px;
+                padding: 6px;
+
+            }
+
+            .badge-primary {
+                color: #fff;
+                background-color: #623da9;
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            body {
+                font-family: 'Montserrat', sans-serif;
+                line-height: 1.4;
+                font-weight: normal;
+                background: #ffffff;
+                overflow-x: hidden;
+            }
+
+            ul {
+                list-style: none;
+                text-align: center;
+            }
+
+            h4 {
+                text-align: center;
+            }
+
+            .navbar {
+                background: #302976;
+                color: #FFFFFF;
+            }
+
+            .nav-link {
+                text-align: left;
+            }
+
+            ::placeholder {
+                color: #322974;
+            }
+
+            #whatsapp_btn {
+                bottom: 20px;
+                right: 40px;
+                position: fixed;
+                text-align: right;
+                z-index: 1024;
+
+            }
+
+            #whatsapp_btn img {
+                width: 60px;
+            }
+
+            .footer_link li {
+                margin-bottom: 5px;
+            }
+
+            #section07 {
+                display: none;
+            }
+
+            /*mobile css */
+            @media screen and (max-width: 600px) {
+                #section07 {
+                    display: block;
+                }
+
+                .scroll-down-text {
+                    display: none;
+                }
+
+                .menu_navbar {
+                    position: sticky !important;
+                }
+
+                .navbar-light .navbar-toggler {
+                    color: #fff;
+                    border-color: #fff;
+                }
+
+                .why_us_section .btns1 {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-top: 30px;
+                }
+
+                .border_heading {
+                    margin-bottom: 14px;
+                }
+
+                .why_us_section .box-content1 img {
+                    width: 64px !important;
+                    margin-top: 15px;
+                    margin-bottom: 12px;
+                    margin-left: 0px;
+                }
+
+                #footer .container {
+                    text-align: center;
+                }
+
+                #footer .footer_left_section {
+                    flex-direction: column;
+                    margin-top: 36px;
+                }
+
+                #footer .footer_left_section span {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1.2;
+                    margin: 20px 0px;
+                }
+
+                .subscribe-text span {
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-left: 0px;
+                }
+
+                #footer .subscribe-form form {
+                    display: flex;
+                    margin-top: 10px;
+                }
+
+                .subscribe2-wrapper .subscribe-form input {
+                    font-size: 13px;
+                    font-weight: 500;
+                    height: 36px;
+                    margin-right: 8px;
+                    padding-left: 10px;
+
+                }
+
+                .subscribe2-wrapper .subscribe-form button {
+                    font-size: 14px;
+                    padding: 6px 36px;
+                    height: 36px;
+                }
+
+                .footer_bottom p {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 4px;
+                }
+
+                .footer_bottom .col-md-9 {
+                    flex-direction: column;
+                }
+
+                .footer .container:after {
+                    height: 60px;
+                    width: 115px;
+                    left: 4px;
+                    bottom: 7px;
+
+                }
+
+
+                #footer {
+                    background-image: url(../image/footer_back.jpg);
+                    background-size: cover;
+                    padding-top: 52px;
+                    background-position: 96% 10%;
+                    height: 715px;
+                    background-repeat: no-repeat;
+                }
+
+                #footer .row .footer_link:nth-child(2),
+                #footer .row .footer_link:nth-child(3) {
+                    display: none !important;
+                }
+
+                .footer_left_section img {
+                    width: 55%;
+                }
+            }
+
+
+            /*new scroll*/
+            .scroll-down-text {
+                font-size: 0.8rem;
+                -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+                position: fixed;
+                bottom: 6.25em;
+                left: 0%;
+                z-index: 5;
+                -webkit-transition: opacity 0.5s;
+                transition: opacity 0.5s;
+                z-index: 2000;
+                opacity: 1;
+            }
+
+            .scroll-down-text span {
+                text-transform: capitalize;
+                margin: 0;
+                margin-right: 10px;
+                color: black;
+
+            }
+
+            .scroll-down-text.show {
+                opacity: 0;
+            }
+
+            .scroll-down-text::after {
+                content: "";
+                width: 60px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                top: 50%;
+                right: -60px;
+            }
+
+
+            #section07 a {
+                padding-top: 45px;
+                z-index: 1000;
+            }
+
+            #section07 a span {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 15px;
+                height: 15px;
+                margin-left: -12px;
+                border-left: 2px solid #0d0c0c;
+                border-bottom: 2px solid #0d0c0c;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-animation: sdb07 2s infinite;
+                animation: sdb07 2s infinite;
+                opacity: 0;
+                box-sizing: border-box;
+            }
+
+            #section07 a span:nth-of-type(1) {
+                -webkit-animation-delay: 0s;
+                animation-delay: 0s;
+            }
+
+            #section07 a span:nth-of-type(2) {
+                top: 12px;
+                -webkit-animation-delay: .15s;
+                animation-delay: .15s;
+            }
+
+            #section07 a span:nth-of-type(3) {
+                top: 26px;
+                -webkit-animation-delay: .3s;
+                animation-delay: .3s;
+            }
+
+            @-webkit-keyframes sdb07 {
+                0% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            @keyframes sdb07 {
+                0% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+
+
+
+
+            #section07 {
+                background: url(https://picsum.photos/1200/800?image=675) center center / cover no-repeat;
+            }
+
+
+            #thanks {
+                background-color: #fff;
+            }
+
+            #thanks::after {
+                content: none;
+            }
+
+            #thanks div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            #thanks h2 {
+                margin-bottom: 60px;
+                color: #333;
+                font: normal 300 64px/1 'Josefin Sans', sans-serif;
+                text-align: center;
+                white-space: nowrap;
+            }
+
+            #thanks p {
+                color: #333;
+                font: normal 400 20px/1 'Josefin Sans', sans-serif;
+            }
+
+            #thanks p a {
+                color: #333;
+                text-decoration: none;
+                transition: color .3s;
+            }
+
+            #thanks p a:hover {
+                color: #888;
+            }
+
+            .demo a {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                z-index: 2;
+                display: inline-block;
+                -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                color: #fff;
+                font: normal 400 20px/1 'Josefin Sans', sans-serif;
+                letter-spacing: .1em;
+                text-decoration: none;
+                transition: opacity .3s;
+            }
+
+            .demo a:hover {
+                opacity: .5;
+            }
+
+        </style>
+
+    </head>
+
+    <body data-new-gr-c-s-check-loaded="14.1052.0" data-gr-ext-installed="">
+
+        <div class="scroll-down-text">
+            <span>scroll down</span>
+        </div>
+        <section id="section07" class="demo">
+            <a href="#section08"><span></span><span></span><span></span></a>
+        </section>
+
+        <div id="app">
+
+
+            <style>
+                main {
+                    padding-top: 70px;
+                }
+
+                .menu_navbar {
+                    position: fixed;
+                    width: 100%;
+                    top: 0px;
+                    z-index: 1024;
+                }
+
+                .logo-width {
+                    width: 145px;
+                }
+
+                .navbar-light .navbar-nav .nav-link {
+                    color: #322974;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+
+                /*new css*/
+                .navbar {
+                    background: #fff;
+                    color: #302976;
+                }
+
+
+                @media screen and (max-width: 769px) {
+                    .logo-width {
+                        width: 120px;
+                    }
+
+                    main {
+                        padding-top: 0px;
+                    }
+
+                    main .bg_top {
+                        overflow: hidden;
+                    }
+
+                    /*.menu_navbar*/
+                    /*{*/
+                    /*    width: auto; */
+                    /*}*/
+                }
+
+            </style>
+            <nav class="navbar py-1 py-md-2 navbar-expand-md navbar-light shadow-sm menu_navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="https://Kbiafiling.in">
+                        <img src="https://Kbiafiling.in/image/newlogo.svg" class="logo-width">
+
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav m-auto costom_border">
+                            <!-- <li class="nav-item">-->
+                            <!--    <a class="nav-link" href="https://Kbiafiling.in">Home</a>-->
+                            <!--</li>-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://Kbiafiling.in/About-Kbiafiling-Tax-Advisory">About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="https://Kbiafiling.in/service/Best-tax-and-financial-services-in-india">Services
+                                    &amp; Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://Kbiafiling.in/blogs">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://Kbiafiling.in/Contact-Kbiafiling">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://Kbiafiling.in/resource">Resources</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://Kbiafiling.in/calendar">Calendar</a>
+                            </li>
+                        </ul>
+
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ml-auto right_login">
+                            <!-- Authentication Links -->
+                            <li class="nav-item active" style="margin-left:-1px;margin-bottom:-1px;">
+                                <a class="nav-link border_custom" href="https://Kbiafiling.in/login">Login</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link border_custom" href="https://Kbiafiling.in/register">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Button trigger modal -->
+
+
+
+
+            <main>
+
+                <div class="bg_top">
+
+                    <style>
+                        .work_links img {
+                            transition: all .4s ease-in-out;
+                        }
+
+                        .work_links img:hover {
+                            transform: translateY(-5px) translateX(-5px) scale(1.12);
+                            border: 2px solid #a75db3;
+                            padding: 5px;
+                        }
+
+                        .achievements {
+                            background: url(image/demosection12.svg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-positionY: 10% 16%;
+                            padding-top: 132px;
+                            padding-bottom: 250px;
+                            position: relative;
+                            height: 100%;
+                        }
+
+                        .second_back .active2 img {
+                            border: 2px solid #a75db3;
+                            padding: 5px;
+                        }
+
+                        .achievements .row {
+                            padding: 0px 190px 0px 100px !important;
+                        }
+
+                        .achievements span {
+                            font-size: 22px;
+                            color: #332A79;
+                            text-align: center;
+                            font-weight: 600;
+                        }
+
+                        .achievements .icon {
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            /*border: 1px solid #5a55c0;*/
+                            padding: 15px 10px;
+                            border-radius: 10px;
+                            box-shadow: 0 0.125rem 0.35rem rgb(0 0 0 / 18%) !important;
+                            z-index: 1024;
+                            background: #fff;
+                            margin-top: 30px;
+                            margin-bottom: 30px;
+                        }
+
+                        .achievements .col-md-12 {
+                            padding: 30px 20px;
+                        }
+
+                        .achievements .icon img {
+                            width: 100px;
+                        }
+
+                        .achievements h3 {
+                            text-align: center;
+                            margin-top: -1px;
+                            margin-bottom: 4px;
+                        }
+
+                        .achievements .active.center .icon {
+                            transform: translateY(-18px) scale(1.06);
+                            transition: all ease-in-out 0.6s;
+                        }
+
+                        .achievements .img_icon {
+                            text-align: center !important;
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        .testimonials_section img {
+                            border-radius: 50%;
+                            /*box-shadow: 3px 3px 19px #5842ad75;*/
+                        }
+
+                        .section_image img {
+                            position: absolute;
+                            left: 12px;
+                            width: 65%;
+                            top: 127px;
+                        }
+
+                        .testimonials_section .tabs_work.active2 {
+                            display: block;
+                        }
+
+                        .testimonials_section .tabs_work {
+                            display: none;
+                        }
+
+                        .fade-in-bl {
+                            -webkit-animation: fade-in-bl 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+                            animation: fade-in-bl 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+                        }
+
+                        /* ----------------------------------------------
+ * Generated by Animista on 2021-5-22 23:32:20
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+                        /**
+ * ----------------------------------------
+ * animation fade-in-bl
+ * ----------------------------------------
+ */
+                        @-webkit-keyframes fade-in-bl {
+                            0% {
+                                -webkit-transform: translateX(-50px) translateY(50px);
+                                transform: translateX(-50px) translateY(50px);
+                                opacity: 0;
+                            }
+
+                            100% {
+                                -webkit-transform: translateX(0) translateY(0);
+                                transform: translateX(0) translateY(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        @keyframes fade-in-bl {
+                            0% {
+                                -webkit-transform: translateX(-50px) translateY(50px);
+                                transform: translateX(-50px) translateY(50px);
+                                opacity: 0;
+                            }
+
+                            100% {
+                                -webkit-transform: translateX(0) translateY(0);
+                                transform: translateX(0) translateY(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        .owl-carousel3.owl-theme .owl-dots {
+                            text-align: left;
+                            margin-left: 30px;
+                        }
+
+                        .owl-carousel3.owl-theme .owl-dots .owl-dot span {
+                            background: #975fd8;
+                            margin: 5px;
+                        }
+
+                        .owl-carousel3.owl-theme .owl-dots .owl-dot span:hover {
+                            background: #975fd8;
+                        }
+
+                        .owl-carousel3.owl-theme .owl-dots .owl-dot:hover {
+                            border: 1px solid #ffffff91;
+                            border-radius: 50%;
+                        }
+
+                        .owl-carousel3.owl-theme .owl-dots .owl-dot.active span {
+                            background: #975fd8;
+                        }
+
+                        .owl-carousel3.owl-theme .owl-dots .owl-dot.active {
+                            border: 1px solid #ffffff91;
+                            border-radius: 50%;
+                        }
+
+                        .owl-carousel3.owl-theme .owl-dots .owl-dot {
+                            height: 22px;
+                            width: 22px;
+                            margin: 5px 3px;
+                        }
+
+                        /*new css for next and prev owl btn*/
+                        #about-owl .owl-button-div .owl-slider-prev-button,
+                        #about-owl .owl-button-div .owl-slider-next-button {
+                            padding: 5px 10px;
+                            cursor: pointer;
+                            background: linear-gradient(180deg, #302976, #7947c1);
+                            color: white;
+                            border-radius: 4px;
+                            padding: 5px 10px;
+                            cursor: pointer;
+                            position: absolute;
+                            font-size: 18px;
+                            font-weight: 600;
+                            top: 20%;
+                        }
+
+                        #about-owl .owl-button-div .owl-slider-prev-button {
+                            left: -4%;
+                        }
+
+                        #about-owl .owl-button-div .owl-slider-next-button {
+                            right: -4%;
+                        }
+
+                        #why_owl .owl-button-div .owl-slider-prev-button,
+                        #why_owl .owl-button-div .owl-slider-next-button {
+                            padding: 5px 10px;
+                            cursor: pointer;
+                            background: linear-gradient(180deg, #302976, #7947c1);
+                            color: white;
+                            border-radius: 4px;
+                            padding: 5px 10px;
+                            cursor: pointer;
+                            /*position: absolute;*/
+                            font-size: 18px;
+                            font-weight: 600;
+                            /*top: 42%;*/
+                        }
+
+                        .hero_section .welcome_textbox h2 {
+                            font-size: 46px;
+                            margin-top: 30px;
+                        }
+
+                        .hero_section .welcome_textbox {
+                            padding-top: 60px;
+                        }
+
+                        /* home page css for mobile view*/
+
+                        @media screen and (max-width: 600px) {
+
+                            .achievements {
+                                background-size: cover;
+                                background-position: left;
+                                padding-top: 54px;
+                                padding-bottom: 2px;
+                                position: relative;
+                                height: auto;
+                            }
+
+                            .achievements .icon {
+                                margin-left: 40px;
+                                margin-right: 16px;
+                            }
+
+                            .achievements .row {
+                                padding: 0px 0px 0px 1px !important;
+                            }
+
+                            #about-owl .owl-button-div .owl-slider-prev-button,
+                            #about-owl .owl-button-div .owl-slider-next-button {
+                                top: 30%;
+                            }
+
+                            .no-js .owl-carousel,
+                            .owl-carousel.owl-loaded {
+                                text-align: center;
+                            }
+
+                            #about-owl .owl-button-div .owl-slider-prev-button {
+                                left: 0.4%;
+                            }
+
+                            #about-owl .owl-button-div .owl-slider-prev-button,
+                            #about-owl .owl-button-div .owl-slider-next-button {
+                                padding: 2px 4px;
+                                cursor: pointer;
+                                position: absolute;
+                                font-size: 13px;
+                                z-index: 1024;
+                            }
+
+                            #about-owl .owl-button-div .owl-slider-next-button {
+                                right: 2%;
+                            }
+
+                            .hero_section .welcome_textbox .col-md-12 {
+                                display: flex;
+                                justify-content: center;
+                                text-align: center;
+                            }
+
+                            /*css for hero section*/
+                            .hero_section .welcome_textbox h2 {
+                                font-size: 28px;
+                                text-align: center;
+                            }
+
+                            .hero_section .welcome_textbox {
+                                padding-top: 73px;
+                            }
+
+                            .home_button {
+                                justify-content: center;
+                            }
+
+                            .home_button .button {
+                                padding: 6px 9px;
+                                font-size: 14px;
+                                margin-top: 4px;
+                                margin-bottom: 8px;
+                            }
+
+                            .owl-theme .owl-nav.disabled+.owl-dots {
+                                margin-top: -28px !important;
+                            }
+
+                            .owl-carousel3.owl-theme .owl-dots {
+                                text-align: center;
+                                margin-left: 0px;
+                            }
+
+                            .hero_section {
+                                height: 100%;
+                                background-repeat: no-repeat;
+                                background-position: 35%;
+                            }
+
+                            .owl-carousel1 .owl-theme .owl-nav {
+                                margin-top: 10px;
+                                display: none;
+                            }
+
+                            .box-content {
+                                box-shadow: 2px 3px 11px 0px rgb(50 50 50 / 20%);
+                                padding: 5px 10px;
+                                margin: 40px 10px;
+                                height: 167px;
+                            }
+
+                            .owl-carousel1 .owl-item.active {
+                                padding-left: 1rem;
+                            }
+
+                            .section2 .section2_text p {
+                                line-height: 1.3;
+                                font-size: 14px;
+                            }
+
+                            .section2 {
+                                background-size: 100%;
+                                background-position: 10% 1%;
+                                padding-bottom: 70px;
+                                padding-top: 300px !important;
+                            }
+
+                            .section2 .container:after {
+                                height: 60px;
+                                width: 115px;
+                            }
+
+                            #footer .footer_link h4,
+                            #footer .footer_link ul li {
+                                text-align: center;
+                            }
+                        }
+
+                    </style>
+
+
+
+
+
+                    <div class="hero_section">
+                        <div class="container">
+                            <div class="row welcome_textbox">
+                                <div class="col-md-12 ml-md-3 ml-0">
+                                    <div class="row">
+                                        <div class="col-md-6 mt-md-5 mt-0 pt-md-4 pt-0 px-0">
+                                            <h1 style="color:#5E39A0;font-size: 1px;height: 0px;">Kbiafiling | India’s
+                                                most trusted Tax filing service</h1>
+                                            <h2 class="text-white">
+                                                <span class="hideOnLoad" style="display: none;">Welcome to
+                                                    Kbiafiling,</span> <span class="txt-rotate" data-period="1000"
+                                                    data-rotate="[ &quot;Welcome to Kbiafiling,&quot;,&quot;Accurate services,&quot;, &quot;100% trusted service,&quot; ]"><span
+                                                        class="wrap">Accurate servic</span></span><br>
+                                            </h2>
+
+                                            <p class="text-white mb-2" style="font-size: 17px;">Committed towards
+                                                eminent tax &amp; financial assistance!</p>
+
+                                            <div class="home_button pb-4 pb-md-0">
+                                                <a class="button after_icon mr-3"
+                                                    href="https://Kbiafiling.in/service">Plans and Pricing</a>
+                                                <a href="#request_quote" class="button px-4">
+                                                    Get Quotation
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 p-0 text-center">
+                                            <img src="/image/Tax-Advisory-Kbiafiling.png" alt="tax advisory firm"
+                                                width="85%">
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="owl-carousel owl-carousel3 owl-theme row">-->
+                                    <!--  <div> -->
+                                    <!--    <h1 class="text-white">Welcome to FinTax,</h1>-->
+                                    <!--  <p class="text-white mb-2" style="font-size: 17px;">Committed towards eminent tax & financial assistance!</p>-->
+
+                                    <!--  <div class="home_button pb-4 pb-md-0">-->
+                                    <!--     <a class="button after_icon mr-3" href="https://Kbiafiling.in/service">Plans and Pricing</a>-->
+                                    <!--     <a href="tel:6264919005" class="button px-4">-->
+                                    <!--     Get Quotation-->
+                                    <!--     </a>-->
+                                    <!--  </div>-->
+                                    <!--</div>-->
+                                    <!--  <div> -->
+                                    <!--    <h1 class="text-white">Accurate services,</h1>-->
+                                    <!--  <p class="text-white mb-2" style="font-size: 17px;">At modest prices!</p>-->
+
+                                    <!--  <div class="home_button pb-4 pb-md-0">-->
+                                    <!--     <a  href="https://Kbiafiling.in/service" class="button after_icon mr-3" >Plans and Pricing</a>-->
+                                    <!--     <a href="tel:6264919005" class="button px-4">-->
+                                    <!--     Get Quotation-->
+                                    <!--     </a>-->
+                                    <!--  </div>-->
+                                    <!--</div>-->
+                                    <!--  <div> -->
+                                    <!--   <h1 class="text-white">100% trusted service,</h1>-->
+                                    <!--  <p class="text-white mb-2" style="font-size: 17px;">For quick & authentic consultation!</p>-->
+
+                                    <!--<div class="home_button pb-5 pb-md-0">-->
+                                    <!--     <a  href="https://Kbiafiling.in/service" class="button after_icon mr-3" >Plans and Pricing</a>-->
+                                    <!--     <a href="tel:6264919005" class="button px-4">-->
+                                    <!--     Get Quotation-->
+                                    <!--     </a>-->
+                                    <!--  </div></div>-->
+                                    <!--</div>-->
+
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container pl-4" id="about-owl" style="position: relative; margin-top: -45px;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="owl-carousel owl-carousel1 owl-theme row owl-loaded owl-drag"
+                                        id="box-content">
+
+
+
+
+
+
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage"
+                                                style="transform: translate3d(-1376px, 0px, 0px); transition: all 0.25s ease 0s; width: 3579px;">
+                                                <div class="owl-item cloned" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number2.svg" alt="">-->
+                                                            <h4>Tax Return Filing</h4>
+                                                            <p>The easiest, secure and most reliable way to get your Tax
+                                                                return filed with our affordable plans</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item cloned" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number3.svg" alt="">-->
+                                                            <h4>Licenses &amp; Trademarks</h4>
+                                                            <p>Hassle free drafting &amp; filing of Trademark
+                                                                application, all taken care of by our TM specialist.</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item cloned" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number4.svg" alt="">-->
+                                                            <h4>Tax Consultancy</h4>
+                                                            <p>Our Tax Experts help you with will tax related problems
+                                                                to optimize your Tax liability</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item cloned" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number5.svg" alt="">-->
+                                                            <h4>Financial Consultancy</h4>
+                                                            <p>Investment and wealth management advice customized to
+                                                                cater various risk profiles</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item" style="width: 275.25px;"><a href="#" style="">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number1.svg" alt="">-->
+                                                            <h4>Business Registrations</h4>
+                                                            <p>You one stop shop to apply all your business and tax
+                                                                registrations at one place</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item active" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number2.svg" alt="">-->
+                                                            <h4>Tax Return Filing</h4>
+                                                            <p>The easiest, secure and most reliable way to get your Tax
+                                                                return filed with our affordable plans</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item active" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number3.svg" alt="">-->
+                                                            <h4>Licenses &amp; Trademarks</h4>
+                                                            <p>Hassle free drafting &amp; filing of Trademark
+                                                                application, all taken care of by our TM specialist.</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item active" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number4.svg" alt="">-->
+                                                            <h4>Tax Consultancy</h4>
+                                                            <p>Our Tax Experts help you with will tax related problems
+                                                                to optimize your Tax liability</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item active" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number5.svg" alt="">-->
+                                                            <h4>Financial Consultancy</h4>
+                                                            <p>Investment and wealth management advice customized to
+                                                                cater various risk profiles</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item cloned" style="width: 275.25px;"><a href="#"
+                                                        style="">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number1.svg" alt="">-->
+                                                            <h4>Business Registrations</h4>
+                                                            <p>You one stop shop to apply all your business and tax
+                                                                registrations at one place</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item cloned" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number2.svg" alt="">-->
+                                                            <h4>Tax Return Filing</h4>
+                                                            <p>The easiest, secure and most reliable way to get your Tax
+                                                                return filed with our affordable plans</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item cloned" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number3.svg" alt="">-->
+                                                            <h4>Licenses &amp; Trademarks</h4>
+                                                            <p>Hassle free drafting &amp; filing of Trademark
+                                                                application, all taken care of by our TM specialist.</p>
+                                                        </div>
+                                                    </a></div>
+                                                <div class="owl-item cloned" style="width: 275.25px;"><a href="#">
+                                                        <div class="box-content">
+                                                            <!--<img src="https://Kbiafiling.in/image/number4.svg" alt="">-->
+                                                            <h4>Tax Consultancy</h4>
+                                                            <p>Our Tax Experts help you with will tax related problems
+                                                                to optimize your Tax liability</p>
+                                                        </div>
+                                                    </a></div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-nav"><button type="button" role="presentation"
+                                                class="owl-prev"><span aria-label="Previous">‹</span></button><button
+                                                type="button" role="presentation" class="owl-next"><span
+                                                    aria-label="Next">›</span></button></div>
+                                        <div class="owl-dots"><button role="button"
+                                                class="owl-dot active"><span></span></button><button role="button"
+                                                class="owl-dot"><span></span></button></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn">
+                                <div class="owl-button-div">
+                                    <a class="owl-slider-next-button" onclick="next()">&gt;&gt;</a>
+                                </div>
+                                <div class="owl-button-div"><a class="owl-slider-prev-button"
+                                        onclick="prev()">&lt;&lt;</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section2 pt-5 mt-5">
+                        <div class="container py-5 my-5">
+                            <div class="row">
+                                <div class="col-md-5 section_image">
+                                    <!--<img src="https://Kbiafiling.in/image/about us_who_we_are.gif" alt="" width="100%"> -->
+                                </div>
+                                <div class="col-md-7 section2_text">
+                                    <h2 class="border_heading">Who are we?</h2>
+                                    <h2>Focused on trouble free</h2>
+                                    <h2>Fin-ancial solutions!</h2>
+                                    <p>
+                                        Kbiafiling is a finance and tax advisory start-up conceived and founded with a
+                                        vision of making India more Tax &amp; Financially literate. As a financial
+                                        advisory, we feel that knowledge should be free and everyone should have
+                                        access to it. It is in fact said that none of school/college teaches us the
+                                        basics of tax returns and tax savings although everyone has to ultimately manage
+                                        their finance and pay taxes after a certain age. Because of
+                                        lack of knowledge and awareness related to tax and finance, either people become
+                                        too conservative and park their savings in bank accounts or fixed deposits
+                                        yielding real negative return after adjusting tax and inflation;
+                                        or invest in risky assets (such as shares, mutual funds) without prior knowledge
+                                        and later end up making losses.
+                                    </p>
+                                    <a href="https://Kbiafiling.in/about" style="z-index: 1024; cursor: pointer;">
+                                        <span style="color: #5a55bf;">
+                                            <b>Learn More &gt;&gt;</b>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing_section pt-5">
+                        <div class="container pt-5">
+                            <h2 class="border_heading pt-3">PRICING</h2>
+                            <div class="row d-flex-justify">
+                                <div class="col-md-8">
+                                    <h2 style="color: #5a55bf;">Explore our range of affordable service plans</h2>
+                                    <h2 style="color: #302976;">Pricing Plans!</h2>
+                                </div>
+                                <div class="tab w-25 text-right d-flex-justify col-md-4 col-11 p-0 mt-4 mt-md-0">
+                                    <button class="tablinks w-50 button1 active"
+                                        onclick="openCity(event, 'Individuals')">Personal</button>
+                                    <button class="tablinks button2 w-50"
+                                        onclick="openCity(event, 'Business')">Business</button>
+                                </div>
+                            </div>
+
+                            <div id="Individuals" class="tabcontent active wow fadeInUp animated" data-wow-offset="10"
+                                data-wow-duration="0s"
+                                style="visibility: hidden; animation-duration: 0s; animation-name: none;">
+                                <div class="row py-2 py-md-4">
+                                    <div class="col-md-4 my-3 d-flex-justify">
+                                        <div class="pricing_box custom_padding w-100 active_box">
+                                            <h2>
+                                                Income Tax <br>
+                                                Return Filing
+                                            </h2>
+                                            <h2>@ ₹ 599 <span class="onward_span">Onwards</span></h2>
+                                            <p>Get your return filed with help of our Tax experts at your convenience.
+                                            </p>
+                                            <a href="/service"><span>Learn more &gt;&gt;</span></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 my-3 d-flex-justify">
+                                        <div class="pricing_box custom_padding w-100 active_box">
+                                            <h2>Tax Consultancy &amp; Notice Management</h2>
+                                            <h2>@ ₹ 599 <span class="onward_span">Onwards</span></h2>
+                                            <p>
+                                                Subscribe to our tax consultancy services and some tax.<br>
+                                                Received an income tax notice? Don’t worry. We got you covered!
+                                            </p>
+                                            <a href="/service"><span>Learn more &gt;&gt;</span></a>
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-md-4 my-3 px-4 mx-3 mx-md-0 py-4 py-md-5 active_box">-->
+                                    <!--   <div class="pricing_box pt-2 pl-3 pl-md-2 text-white text-left ">-->
+                                    <!--      <h2>For Small Business2</h2>-->
+                                    <!--      <h2>@ &#8377; 2,499 </h2>-->
+                                    <!--      <ul class="pl-3 ml-1 pt-3 text-left tab_list_ul">-->
+                                    <!--         <li>Profit/loss from F&O or Intraday Trading</li>-->
+                                    <!--         <li>Income from business (Annual -->
+                                    <!--            Turnover < &#8377; 2 crores) -->
+                                    <!--         </li>-->
+                                    <!--         <li>Preparation of Account Summary,-->
+                                    <!--            P&L and balance sheet-->
+                                    <!--         </li>-->
+                                    <!--         <li>Also covers salary, other incomes-->
+                                    <!--            and capital gains-->
+                                    <!--         </li>-->
+                                    <!--      </ul>-->
+                                    <!--      <div class="span">Learn more >></div>-->
+                                    <!--   </div>-->
+                                    <!--</div>-->
+                                    <div class="col-md-4 my-3 d-flex-justify">
+                                        <div class="pricing_box custom_padding w-100 active_box">
+                                            <h2>Financial Consultancy</h2>
+                                            <h2>@ ₹ 999 <span class="onward_span">Onwards</span></h2>
+                                            <p>Consult our financial advisor to manage your wealth and achieve financial
+                                                goals.</p>
+                                            <a href="/service"><span>Learn more &gt;&gt;</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="Business" class="tabcontent wow fadeInUp animated animated animated"
+                                data-wow-offset="10" data-wow-duration="0.5s"
+                                style="visibility: visible; animation-duration: 0.5s;">
+                                <div class="row py-2 py-md-4">
+                                    <div class="col-md-4 my-3 d-flex-justify">
+                                        <div class="pricing_box custom_padding w-100 active_box">
+                                            <h2>
+                                                Income Tax <br>
+                                                Return Filing
+                                            </h2>
+                                            <h2>@ ₹ 1,999 <span class="onward_span">Onwards</span></h2>
+                                            <p>Get the Income Tax return of your business filed with the help of our Tax
+                                                experts at your convenience.</p>
+                                            <a href="/service"><span>Learn more &gt;&gt;</span></a>
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="col-md-4 my-3 mx-3 mx-md-0 px-4 py-4 py-md-5 active_box">-->
+                                    <!--   <div class="pricing_box pt-2 pl-3 pl-md-2 text-white text-left ">-->
+                                    <!--      <h2>For Small Business</h2>-->
+                                    <!--      <h2>&#8377; 2,499 </h2>-->
+                                    <!--      <ul class="pl-3 ml-1 pt-3 text-left tab_list_ul">-->
+                                    <!--         <li>Profit/loss from F&O or Intraday Trading</li>-->
+                                    <!--         <li>Income from business (Annual -->
+                                    <!--            Turnover < Rs 2 crores) -->
+                                    <!--         </li>-->
+                                    <!--         <li>Preparation of Account Summary,-->
+                                    <!--            P&L and balance sheet-->
+                                    <!--         </li>-->
+                                    <!--         <li>Also covers salary, other incomes-->
+                                    <!--            and capital gains-->
+                                    <!--         </li>-->
+                                    <!--      </ul>-->
+                                    <!--      <div class="span">Learn more >></div>-->
+                                    <!--   </div>-->
+                                    <!--</div>-->
+                                    <div class="col-md-4 my-3 d-flex-justify">
+                                        <div class="pricing_box custom_padding w-100 active_box">
+                                            <h2>Business Registrations</h2>
+                                            <h2>@ ₹ 999 <span class="onward_span">Onwards</span></h2>
+                                            <p>Starting a business? Confused about license requirements? Don’t worry..
+                                                we are here to help. Get all your legal, compliances &amp; registrations
+                                                requirement fulfilled without any hassles</p>
+                                            <a href="/service"><span>Learn more &gt;&gt;</span></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 my-3 d-flex-justify">
+                                        <div class="pricing_box custom_padding w-100 active_box">
+                                            <h2>
+                                                GST &amp; TDS <br>
+                                                Return
+                                            </h2>
+                                            <h2>@ ₹ 999 <span class="onward_span">Onwards</span></h2>
+                                            <p>File GST &amp; TDS return of your business without any hassles, with the
+                                                help of our Tax experts.</p>
+                                            <a href="/service"><span>Learn more &gt;&gt;</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="ml-1 dotted_img" src="https://Kbiafiling.in/image/dootted_pattern.svg"
+                                alt="Dotted Pattern">
+                        </div>
+                    </div>
+
+                    <div class="why_us_section">
+                        <div class="container pb-md-3 pb-0">
+                            <h2 class="border_heading">Why Us</h2>
+                        </div>
+
+                        <div class="container-fluid" id="why_owl" style="position: relative;">
+                            <div class="row">
+                                <div class="col-md-2">
+
+                                    <div class="btns1 mb-3">
+                                        <div class="owl-button-div"><a class="owl-slider-prev-button"
+                                                onclick="prev1()">&lt;&lt;</a></div>
+                                        <div class="owl-button-div ml-3">
+                                            <a class="owl-slider-next-button" onclick="next1()">&gt;&gt;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-carousel owl-carousel2 col-md-10 owl-theme owl-loaded owl-drag"
+                                    id="box-content">
+
+
+
+
+
+                                    <div class="owl-stage-outer">
+                                        <div class="owl-stage"
+                                            style="transform: translate3d(-1551px, 0px, 0px); transition: all 0.25s ease 0s; width: 4266px;">
+                                            <div class="owl-item cloned" style="width: 387.777px;">
+                                                <div class="box-content1">
+
+                                                    <img class="text-center"
+                                                        src="https://Kbiafiling.in/image/why_us/100accurate.jpg"
+                                                        alt="Tax compliance" width="80%"
+                                                        style="width: 70px !important;">
+                                                    <h3>
+                                                        100% Accurate <br>
+                                                        Tax Compliance
+                                                    </h3>
+                                                    <p>Don’t worry about non-compliance. Our team of experts are here to
+                                                        ﬁle your returns with utmost accuracy. Leave all your worries to
+                                                        us and focus on your business.</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item cloned" style="width: 387.777px;">
+                                                <div class="box-content1">
+                                                    <img class="text-center"
+                                                        src="https://Kbiafiling.in/image/why_us/reachablity.jpg"
+                                                        alt="Easy reachability" width="100%">
+                                                    <h3>
+                                                        Easy <br>
+                                                        Reachability
+                                                    </h3>
+                                                    <p>You can reach out to us via various channels - text, calls,
+                                                        emails, Whatsapp. We recommend using Whatsapp for a super quick
+                                                        response and email for sharing documents.</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item cloned" style="width: 387.777px;">
+                                                <div class="box-content1">
+                                                    <img class="text-center"
+                                                        src="https://Kbiafiling.in/image/why_us/Support and documentation.jpg"
+                                                        alt="Tax support and documentation" width="100%">
+                                                    <h3>
+                                                        Excellent Support <br>
+                                                        &amp; Documentation
+                                                    </h3>
+                                                    <p>Reach out to us for any query after the services. We will be
+                                                        happy to help you! Get all your documents in your dashboard
+                                                        arranged at one place for your easy reference.</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item" style="width: 387.777px;">
+                                                <div class="box-content1">
+                                                    <img src="https://Kbiafiling.in/image/why_us/Dedicated Tax expert.jpg"
+                                                        alt="dedicated tax experts">
+                                                    <h3>
+                                                        Dedicated<br>
+                                                        Expert Teams
+                                                    </h3>
+                                                    <p>Dedicated tax or financial expert is assigned to serve you
+                                                        effectively, smoothly and on time</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item active" style="width: 387.777px;">
+                                                <div class="box-content1">
+                                                    <img class="text-center"
+                                                        src="https://Kbiafiling.in/image/why_us/Online and hussle free process.jpg"
+                                                        alt="online tax service" width="100%">
+                                                    <h3>
+                                                        Complete Online &amp; <br>
+                                                        Hassle free process
+                                                    </h3>
+                                                    <p>No need for any office visit. Get your compliance problems solved
+                                                        hassle free from the comfort of your home or office</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item active" style="width: 387.777px;">
+                                                <div class="box-content1">
+
+                                                    <img class="text-center"
+                                                        src="https://Kbiafiling.in/image/why_us/100accurate.jpg"
+                                                        alt="Tax compliance" width="80%"
+                                                        style="width: 70px !important;">
+                                                    <h3>
+                                                        100% Accurate <br>
+                                                        Tax Compliance
+                                                    </h3>
+                                                    <p>Don’t worry about non-compliance. Our team of experts are here to
+                                                        ﬁle your returns with utmost accuracy. Leave all your worries to
+                                                        us and focus on your business.</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item active" style="width: 387.777px;">
+                                                <div class="box-content1">
+                                                    <img class="text-center"
+                                                        src="https://Kbiafiling.in/image/why_us/reachablity.jpg"
+                                                        alt="Easy reachability" width="100%">
+                                                    <h3>
+                                                        Easy <br>
+                                                        Reachability
+                                                    </h3>
+                                                    <p>You can reach out to us via various channels - text, calls,
+                                                        emails, Whatsapp. We recommend using Whatsapp for a super quick
+                                                        response and email for sharing documents.</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item" style="width: 387.777px;">
+                                                <div class="box-content1">
+                                                    <img class="text-center"
+                                                        src="https://Kbiafiling.in/image/why_us/Support and documentation.jpg"
+                                                        alt="Tax support and documentation" width="100%">
+                                                    <h3>
+                                                        Excellent Support <br>
+                                                        &amp; Documentation
+                                                    </h3>
+                                                    <p>Reach out to us for any query after the services. We will be
+                                                        happy to help you! Get all your documents in your dashboard
+                                                        arranged at one place for your easy reference.</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item cloned" style="width: 387.777px;">
+                                                <div class="box-content1">
+                                                    <img src="https://Kbiafiling.in/image/why_us/Dedicated Tax expert.jpg"
+                                                        alt="dedicated tax experts">
+                                                    <h3>
+                                                        Dedicated<br>
+                                                        Expert Teams
+                                                    </h3>
+                                                    <p>Dedicated tax or financial expert is assigned to serve you
+                                                        effectively, smoothly and on time</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item cloned" style="width: 387.777px;">
+                                                <div class="box-content1">
+                                                    <img class="text-center"
+                                                        src="https://Kbiafiling.in/image/why_us/Online and hussle free process.jpg"
+                                                        alt="online tax service" width="100%">
+                                                    <h3>
+                                                        Complete Online &amp; <br>
+                                                        Hassle free process
+                                                    </h3>
+                                                    <p>No need for any office visit. Get your compliance problems solved
+                                                        hassle free from the comfort of your home or office</p>
+                                                </div>
+                                            </div>
+                                            <div class="owl-item cloned" style="width: 387.777px;">
+                                                <div class="box-content1">
+
+                                                    <img class="text-center"
+                                                        src="https://Kbiafiling.in/image/why_us/100accurate.jpg"
+                                                        alt="Tax compliance" width="80%"
+                                                        style="width: 70px !important;">
+                                                    <h3>
+                                                        100% Accurate <br>
+                                                        Tax Compliance
+                                                    </h3>
+                                                    <p>Don’t worry about non-compliance. Our team of experts are here to
+                                                        ﬁle your returns with utmost accuracy. Leave all your worries to
+                                                        us and focus on your business.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-nav"><button type="button" role="presentation"
+                                            class="owl-prev"><span aria-label="Previous">‹</span></button><button
+                                            type="button" role="presentation" class="owl-next"><span
+                                                aria-label="Next">›</span></button></div>
+                                    <div class="owl-dots disabled"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievements">
+                        <!--<img src="https://Kbiafiling.in/image/demosection1.svg" alt="" width="100%" />-->
+                        <div class="container px-md-5 ">
+                            <div class="row px-md-5 px-0 owl-carousel owl-carousel5 owl-loaded owl-drag">
+
+
+
+
+                                <div class="owl-stage-outer">
+                                    <div class="owl-stage"
+                                        style="transform: translate3d(-753px, 0px, 0px); transition: all 0s ease 0s; width: 2262px;">
+                                        <div class="owl-item cloned" style="width: 251.333px;">
+                                            <div class="col-12">
+                                                <div class="icon">
+                                                    <div class="img_icon"><img
+                                                            src="https://Kbiafiling.in/image/achievements3.jpg"
+                                                            alt="Customers Achievements" width="100%"></div>
+                                                    <h3><span class="count">500 </span><span>+</span></h3>
+                                                    <h5 class="text-center">Happy customers</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item cloned" style="width: 251.333px;">
+                                            <div class="col-12">
+                                                <div class="icon ">
+                                                    <div class="img_icon"><img
+                                                            src="https://Kbiafiling.in/image/achievements2.jpg"
+                                                            alt="Returns filed Achievements" width="100%"></div>
+                                                    <h3><span class="count">1000</span><span>+</span></h3>
+                                                    <h5 class="text-center">Returns filed</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item cloned" style="width: 251.333px;">
+                                            <div class="col-12">
+                                                <div class="icon text-center">
+                                                    <div class="img_icon"><img
+                                                            src="https://Kbiafiling.in/image/achievements1.jpg"
+                                                            alt="Taxes Achievements" width="100%"></div>
+                                                    <h3><span class="count">₹ 50 lakhs</span><span>+</span></h3>
+                                                    <h5 class="text-center">Taxes Saved</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active" style="width: 251.333px;">
+                                            <div class="col-12">
+                                                <div class="icon">
+                                                    <div class="img_icon"><img
+                                                            src="https://Kbiafiling.in/image/achievements3.jpg"
+                                                            alt="Customers Achievements" width="100%"></div>
+                                                    <h3><span class="count">500 </span><span>+</span></h3>
+                                                    <h5 class="text-center">Happy customers</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active" style="width: 251.333px;">
+                                            <div class="col-12">
+                                                <div class="icon ">
+                                                    <div class="img_icon"><img
+                                                            src="https://Kbiafiling.in/image/achievements2.jpg"
+                                                            alt="Returns filed Achievements" width="100%"></div>
+                                                    <h3><span class="count">1000</span><span>+</span></h3>
+                                                    <h5 class="text-center">Returns filed</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item active" style="width: 251.333px;">
+                                            <div class="col-12">
+                                                <div class="icon text-center">
+                                                    <div class="img_icon"><img
+                                                            src="https://Kbiafiling.in/image/achievements1.jpg"
+                                                            alt="Taxes Achievements" width="100%"></div>
+                                                    <h3><span class="count">₹ 50 lakhs</span><span>+</span></h3>
+                                                    <h5 class="text-center">Taxes Saved</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item cloned" style="width: 251.333px;">
+                                            <div class="col-12">
+                                                <div class="icon">
+                                                    <div class="img_icon"><img
+                                                            src="https://Kbiafiling.in/image/achievements3.jpg"
+                                                            alt="Customers Achievements" width="100%"></div>
+                                                    <h3><span class="count">500 </span><span>+</span></h3>
+                                                    <h5 class="text-center">Happy customers</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item cloned" style="width: 251.333px;">
+                                            <div class="col-12">
+                                                <div class="icon ">
+                                                    <div class="img_icon"><img
+                                                            src="https://Kbiafiling.in/image/achievements2.jpg"
+                                                            alt="Returns filed Achievements" width="100%"></div>
+                                                    <h3><span class="count">1000</span><span>+</span></h3>
+                                                    <h5 class="text-center">Returns filed</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-item cloned" style="width: 251.333px;">
+                                            <div class="col-12">
+                                                <div class="icon text-center">
+                                                    <div class="img_icon"><img
+                                                            src="https://Kbiafiling.in/image/achievements1.jpg"
+                                                            alt="Taxes Achievements" width="100%"></div>
+                                                    <h3><span class="count">₹ 50 lakhs</span><span>+</span></h3>
+                                                    <h5 class="text-center">Taxes Saved</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-nav disabled"><button type="button" role="presentation"
+                                        class="owl-prev"><span aria-label="Previous">‹</span></button><button
+                                        type="button" role="presentation" class="owl-next"><span
+                                            aria-label="Next">›</span></button></div>
+                                <div class="owl-dots disabled"><button role="button"
+                                        class="owl-dot active"><span></span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials_section">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-4 three_h2 pl-3 pl-md-5">
+                                    <h2 class="border_heading">TESTIMONIALS</h2>
+                                    <h2>Hear From</h2>
+                                    <h2>Our Customers!</h2>
+
+                                    <div id="work0" class="tabs_work active2 fade-in-bl">
+                                        <p>Professional Team, in depth knowledge and vast experience in all tax related
+                                            matter. Very happy with the service and quick response.</p>
+                                        <h3>Rishabh Bharadwaj</h3>
+                                        <p class="test_cont">
+                                            (Business owner, City Bazaar, Asansol)
+                                        </p>
+                                    </div>
+                                    <div id="work1" class="tabs_work fade-in-bl">
+                                        <p>All my compliances are being taken care of smoothly, and on time, so I can
+                                            focus more on my business now. Professional team, Great service and Right
+                                            advice always.</p>
+                                        <h3>Tauseef Reza</h3>
+                                        <p class="test_cont">
+                                            (Director, Koxa Costumes Pvt Ltd, kolkata)
+                                        </p>
+                                    </div>
+                                    <div id="work2" class="tabs_work fade-in-bl">
+                                        <p>Kbiafiling takes care of all my GST related compliances. Hassle free process
+                                            and prompt response. Great going Team..Keep it up!!!</p>
+                                        <h3>Rohit Agarwal</h3>
+                                        <p class="test_cont">(P S Distributors)</p>
+                                    </div>
+                                    <div id="work3" class="tabs_work fade-in-bl">
+                                        <p>A - Very professional team with in-depth knowledge and experience in wealth
+                                            management. Have been taking financial consultancy services for the last 2
+                                            years and great going so far.</p>
+
+                                        <h3>Rahul Gupta</h3>
+                                        <p class="test_cont">(IIM)</p>
+                                    </div>
+
+                                    <div id="work4" class="tabs_work fade-in-bl">
+                                        <p>Excellent Service!! It was super quick to use their website. Just logged in
+                                            and uploaded the documents from the dashboards, and the team took care of
+                                            everything else. Very reliable and trustworthy team.</p>
+
+                                        <h3>Subham Modi</h3>
+                                    </div>
+                                    <div id="work5" class="tabs_work fade-in-bl">
+                                        <p>Awesome Service by Team Kbiafiling. Have used their income tax filing service
+                                            and it was super quick and hassle free. Bonus, I got to save tax too.</p>
+                                        <h3>Gourishankar Pal</h3>
+                                        <p class="test_cont">(Engineer)</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 second_back d-flex-justify">
+                                    <a class="work_links active2" onclick="openWork(event, 'work0')">
+                                        <img class="circle_img1" src="https://Kbiafiling.in/testi/man.jpg"
+                                            alt="Testimonial-1" width="120">
+                                    </a>
+                                    <a class="work_links" onclick="openWork(event, 'work1')">
+                                        <img class="circle_img2" src="https://Kbiafiling.in/testi/man (1).jpg"
+                                            alt="Testimonial-2" width="70">
+                                    </a>
+                                    <a class="work_links" onclick="openWork(event, 'work2')">
+                                        <img class="circle_img3" src="https://Kbiafiling.in/testi/man (2).jpg"
+                                            alt="Testimonial-3" width="60" style="margin-top: 20px; cursor: pointer;">
+                                    </a>
+                                    <a class="work_links" onclick="openWork(event, 'work3')">
+                                        <img class="circle_img4" src="https://Kbiafiling.in/testi/man (3).jpg"
+                                            alt="Testimonial-4" width="60" style="margin-top: 20px; cursor: pointer;">
+                                    </a>
+
+                                    <a class="work_links" onclick="openWork(event, 'work4')">
+                                        <img class="circle_img5" src="https://Kbiafiling.in/testi/man (4).jpg"
+                                            alt="Testimonial-5" width="60" style="margin-top: 20px; cursor: pointer;">
+                                    </a>
+
+                                    <a class="work_links" onclick="openWork(event, 'work5')">
+                                        <img class="circle_img6" src="https://Kbiafiling.in/testi/man (5).jpg"
+                                            alt="Testimonial-6" width="60" style="margin-top: 20px; cursor: pointer;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact_form_section pt-md-5 pt-3 mt-md-5 mt-0 mx-3" id="request_quote">
+                        <div class="container">
+                            <h2 class="text-center">REQUEST A QUOTE</h2>
+                            <div class="row d-flex-justify">
+                                <div class="col-md-7 form_section">
+                                    <p class="text-center">
+                                        <b style="color: #302976; font-size: 16px;">Don’t stress, just secure your
+                                            financial goals!</b>
+                                    </p>
+                                    <form action="https://Kbiafiling.in/quote" method="post">
+                                        <input type="hidden" name="_token"
+                                            value="ADV5DA5rwpBhjNx4DQurT4Ae0Ph1KRfodrwDdZ6O">
+                                        <div class="form-group mb-4">
+                                            <input type="text" class="form-control" name="name" id="name"
+                                                placeholder="Name">
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group mb-4 col-md-6">
+                                                <input type="number" class="form-control" name="mobile" id="phone"
+                                                    placeholder="Phone">
+                                            </div>
+                                            <div class="form-group mb-4 col-md-6">
+                                                <input type="email" name="email" class="form-control" id="inputEmail4"
+                                                    placeholder="Email address" required="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12 mb-4">
+                                                <select id="inputState" name="service" class="form-control"
+                                                    placeholder="Service Required" required="">
+                                                    <option selected="">Service Required</option>
+                                                    <option value="TDS Return">TDS Return</option>
+                                                    <option value="GST Return">GST Return</option>
+                                                    <option value="Business Registrations">Business Registrations
+                                                    </option>
+                                                    <option value="Digital Signature">Digital Signature</option>
+                                                    <option value="Business Incorporation">Business Incorporation
+                                                    </option>
+                                                    <option value="MCA Compliance">MCA Compliance</option>
+                                                    <option value="Income Tax">Income Tax</option>
+                                                    <option value="Consultancy Services">Consultancy Services</option>
+                                                    <option value="Miscellaneous Services">Miscellaneous Services
+                                                    </option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <textarea class="form-control mb-4" name="description"
+                                                placeholder="Description" style="height: 90px !important;"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100">SUBMIT</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        function openCity( evt, cityName ) {
+                            var i, tabcontent, tablinks;
+                            tabcontent = document.getElementsByClassName( "tabcontent" );
+                            for ( i = 0; i < tabcontent.length; i++ ) {
+                                tabcontent[ i ].style.display = "none";
+                            }
+                            tablinks = document.getElementsByClassName( "tablinks" );
+                            for ( i = 0; i < tablinks.length; i++ ) {
+                                tablinks[ i ].className = tablinks[ i ].className.replace( " active", "" );
+                            }
+                            document.getElementById( cityName ).style.display = "block";
+                            evt.currentTarget.className += " active";
+                        }
+                    </script>
+
+                    <script>
+                        function openWork( evt, workName ) {
+                            var j, tabs_work, work_links;
+                            tabs_work = document.getElementsByClassName( "tabs_work" );
+                            for ( j = 0; j < tabs_work.length; j++ ) {
+                                tabs_work[ j ].style.display = "none";
+                            }
+                            work_links = document.getElementsByClassName( "work_links" );
+                            for ( j = 0; j < work_links.length; j++ ) {
+                                work_links[ j ].className = work_links[ j ].className.replace( " active2", "" );
+                            }
+                            document.getElementById( workName ).style.display = "block";
+                            evt.currentTarget.className += " active2";
+                        }
+                    </script>
+
+                    <script>
+                        $( "#custom_arrow .btn_1" ).click( function () {
+                            if ( $( this ).hasClass( "current" ) ) {
+                                $( this ).removeClass( "current" );
+                            } else {
+                                $( ".btn_1.current" ).removeClass( "current" );
+                                $( this ).addClass( "current" );
+                            }
+                        } );
+
+                        $( ".btns .nav_btn" ).click( function () {
+                            if ( $( this ).hasClass( "current" ) ) {
+                                $( this ).removeClass( "current" );
+                            } else {
+                                $( ".nav_btn.current" ).removeClass( "current" );
+                                $( this ).addClass( "current" );
+                            }
+                        } );
+                    </script>
+
+                    <!--js for text animation-->
+                    <script>
+                        $( document ).ready( function () { } ),
+                            $( function ( t ) {
+                                new WOW().init();
+                                var a = function ( t, e, i ) {
+                                    ( this.toRotate = e ), ( this.el = t ), ( this.loopNum = 0 ), ( this.period = parseInt( i, 10 ) || 2e3 ), ( this.txt = "" ), this.tick(), ( this.isDeleting = !1 );
+                                };
+                                ( a.prototype.tick = function () {
+                                    var t = this.loopNum % this.toRotate.length,
+                                        e = this.toRotate[ t ];
+                                    this.isDeleting ? ( this.txt = e.substring( 0, this.txt.length - 1 ) ) : ( this.txt = e.substring( 0, this.txt.length + 1 ) ), ( this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>" );
+                                    var i = this,
+                                        n = 200 - 100 * Math.random();
+                                    this.isDeleting && ( n /= 2 ),
+                                        this.isDeleting || this.txt !== e ? this.isDeleting && "" === this.txt && ( ( this.isDeleting = !1 ), this.loopNum++, ( n = 500 ) ) : ( ( n = this.period ), ( this.isDeleting = !0 ) ),
+                                        setTimeout( function () {
+                                            i.tick();
+                                        }, n );
+                                } ),
+                                    ( window.onload = function () {
+                                        for ( var t = document.getElementsByClassName( "txt-rotate" ), e = 0; e < t.length; e++ ) {
+                                            var i = t[ e ].getAttribute( "data-rotate" ),
+                                                n = t[ e ].getAttribute( "data-period" );
+                                            i && ( new a( t[ e ], JSON.parse( i ), n ), $( ".hideOnLoad" ).css( "display", "none" ) );
+                                        }
+                                        var o = document.createElement( "style" );
+                                        ( o.type = "text/css" ), ( o.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }" ), document.body.appendChild( o );
+                                    } ),
+                                    screen.width < 600 && ( $( "*" ).removeClass( "fadeInLeft" ), $( "*" ).removeClass( "fadeInRight" ), $( "*" ).removeClass( "fadeInUp" ), $( "*" ).removeClass( "fadeInDown" ) );
+                            } );
+                    </script>
+                    <script>
+                        $( function () {
+                            $( 'a[href*=#]' ).on( 'click', function ( e ) {
+                                e.preventDefault();
+                                $( 'html, body' ).animate( { scrollTop: $( $( this ).attr( 'href' ) ).offset().top }, 500, 'linear' );
+                            } );
+                        } );
+                    </script>
+
+
+
+                </div>
+
+            </main>
+        </div>
+
+
+        <div id="footer" class="footer mt-5">
+            <div class="container mb-2">
+                <div class="row pb-0 pb-md-3">
+                    <div class="col-md-5 pr-3 d-flex ">
+                        <div class="footer_left_section w-100">
+                            <img src="https://Kbiafiling.in/image/logo.png" alt="Kbiafiling White logo" width="50%">
+                            <!--<span >Tax Problems<br>We Can Readlly Help-->
+                            <!--</span>-->
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-6 footer_link my-3 my-md-0">
+                                <h4 class="mb-3">
+                                    Quick Links
+                                </h4>
+                                <ul class="pl-0 ml-0 ">
+
+                                    <li><a href="/About-Kbiafiling-Tax-Advisory">About Us</a></li>
+                                    <li><a href="/service/Best-tax-and-financial-services-in-india">Services &amp;
+                                            Pricing</a></li>
+                                    <li><a href="/blogs">Blog</a></li>
+                                    <li><a href="/Contact-Kbiafiling">Contact Us </a></li>
+                                    <li><a href="/resource">Resources</a></li>
+                                </ul>
+                            </div>
+                            <!--<div class="col-md-4 footer_link">-->
+                            <!--    <h4>-->
+                            <!--        Heading-->
+                            <!--    </h4>-->
+                            <!--    <ul class="pl-0 ml-0">-->
+                            <!--        <li><a>link</a></li>-->
+                            <!--        <li><a>link</a></li>-->
+                            <!--        <li><a>link</a></li>-->
+                            <!--        <li><a>link</a></li>-->
+                            <!--        <li><a>link</a></li>-->
+                            <!--    </ul>-->
+                            <!--</div>-->
+                            <div class="col-md-6 footer_link">
+                                <h4 class="mb-3">
+                                    Our Policies
+                                </h4>
+                                <ul class="pl-0 ml-0">
+                                    <li><a href="/termscondition" style="color:white">Terms &amp; Conditions</a></li>
+                                    <li><a href="/refundpolicy" style="color:white">Refunds Policy</a></li>
+                                    <li><a href="/privacypolicy" style="color:white">Privacy Policy</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row mt-md-3 mt-0">
+
+                    <div class="col-md-4 pt-1">
+                        <div class="subscribe-text ml-0 ml-md-3">
+                            <span>Signup for our newsletter</span>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="subscribe-wrapper subscribe2-wrapper">
+                            <div class="subscribe-form">
+                                <form action="https://Kbiafiling.in/newsquote" method="post">
+                                    <input type="hidden" name="_token" value="ADV5DA5rwpBhjNx4DQurT4Ae0Ph1KRfodrwDdZ6O">
+                                    <input placeholder="enter your email address" type="email" name="email"
+                                        class="form-control" style="color:#342A7A">
+                                    <button type="submit">Submit </button>
+                                </form>
+                            </div>
+                            <p class="pt-2 pl-2">We respect your privacy.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+
+            </div>
+
+
+
+            <div class="footer_bottom mt-3">
+                <div class="container pt-3">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p> © 2021 Kbiafiling. All rights reserved</p>
+                        </div>
+
+                        <div class="col-md-5 d-flex" style="justify-content:center; align-items: center;">
+                            <!--<a href="/termscondition" style="color:white"><p class="mr-md-5 mr-0">Terms & Conditions</p></a>-->
+                            <!--<a href="/refundpolicy" style="color:white"><p class="mr-md-5 mr-0">Refunds Policy</p></a>-->
+                            <!--<a href="/privacypolicy" style="color:white"><p class="mr-md-5 mr-0">Privacy Policy</p></a>-->
+                            <div class="footer_social mb-3">
+                                <span class="mr-1" style="color: #fff; font-size: 15px;">
+                                    <b>Follow us on</b>
+                                </span>
+                                <a href="https://www.facebook.com/Kbiafiling-101920092175479" target="_blank"><img
+                                        class="p-1" src="https://Kbiafiling.in/image/facebook.svg" alt="facebook icon"
+                                        style="width: 28px;"></a>
+                                <a href="https://twitter.com/FTaxtic" target="_blank"><img class="p-1"
+                                        src="https://Kbiafiling.in/image/twiter.svg" alt="twiter icon"
+                                        style="width: 30px;"></a>
+                                <!--<a href="#"><img class="p-1" src="image/whatsapp.svg" alt="whatsapp" style="width: 27px;"></a>-->
+                                <a href="https://www.instagram.com/Kbiafiling.in/" target="_blank"><img class="p-1"
+                                        src="https://Kbiafiling.in/image/instagram-sketched.svg" alt="instagram icon"
+                                        style="width: 27px;"></a>
+                                <a href="http://www.linkedin.com/in/Kbiafiling" target="_blank"><img class="p-0"
+                                        src="https://Kbiafiling.in/image/linkedin_social_icon.svg" alt="linked-in icon"
+                                        style="width: 24px;"></a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <p>Designed &amp; Developed by <a href="http://futuremarketers.in/" target="_blank">Future
+                                    Marketers</a></p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="whatsapp_btn" class=" whatsapp"><a
+                href="https://api.whatsapp.com/send?phone=918466860071&amp;text=Hello,%20I%20want%20to%20know%20more%20about%20FintaxTic"
+                target="_blank" rel="noopener noreferrer">
+                <img src="https://Kbiafiling.in/image/whatsapp_img.png" alt="whatsapp icon"></a>
+        </div>
+        <script src="https://Kbiafiling.in/js/jquery-3.5.0.min.js"></script>
+        <script src="https://Kbiafiling.in/js/wow.min.js"></script>
+        <script src="https://Kbiafiling.in/js/owl.carousel.min.js"></script>
+
+        <script>
+            $( document ).ready( function () {
+                var owl = $( ".owl-carousel1" );
+                var owl2 = $( '.owl-carousel2' );
+                var owl3 = $( '.owl-carousel3' );
+                var owl4 = $( '.owl-carousel4' );
+                var owl5 = $( '.owl-carousel5' );
+
+                owl.owlCarousel( {
+                    loop: true,
+                    nav: false,
+                    autoplay: true,
+                    dots: true,
+                    autoplayTimeout: 3000,
+                    items: 4,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: true
+                        },
+                        600: {
+                            items: 1,
+                            nav: false
+                        },
+                        1000: {
+                            items: 4,
+                            nav: true,
+                            loop: true
+                        }
+
+                    }
+                } );
+
+                owl2.owlCarousel( {
+                    loop: true,
+                    nav: false,
+                    autoplay: true,
+                    dots: false,
+                    autoplayTimeout: 3000,
+                    items: 3,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: true
+                        },
+                        600: {
+                            items: 1,
+                            nav: false
+                        },
+                        1000: {
+                            items: 3,
+                            nav: true,
+                            loop: true
+                        }
+                    }
+                } );
+
+                owl3.owlCarousel( {
+                    loop: true,
+                    nav: false,
+                    autoplay: true,
+                    dots: true,
+                    autoplayTimeout: 4000,
+                    autoplayHoverPause: true,
+                    items: 1,
+                } );
+
+                owl4.owlCarousel( {
+                    loop: true,
+                    nav: false,
+                    autoplay: true,
+                    dots: false,
+                    autoplayTimeout: 4000,
+                    autoplayHoverPause: true,
+                    items: 1,
+                    navigation: true,
+
+                    responsive: {
+                        0: {
+                            items: 1,
+                            autoplay: true,
+                            autoplayTimeout: 4000,
+                            animateOut: "slideOutRight",
+                            animateIn: "slideInLeft",
+                            margin: 10,
+                            nav: false
+                        },
+                        600: {
+                            items: 1,
+                            autoplay: true,
+                            autoplayTimeout: 4000,
+                            animateOut: "slideOutRight",
+                            animateIn: "slideInLeft",
+                            margin: 10,
+                            nav: false
+                        },
+                        1000: {
+                            items: 1,
+                            nav: false,
+                            loop: false
+                        }
+                    }
+                } );
+
+
+
+                owl5.owlCarousel( {
+                    loop: true,
+                    center: false,
+                    nav: false,
+                    autoplay: false,
+                    dots: true,
+                    autoplayTimeout: 4000,
+                    autoplayHoverPause: true,
+                    items: 1,
+                    navigation: true,
+
+                    responsive: {
+                        0: {
+                            items: 1,
+                            loop: true,
+                            autoplayTimeout: 3000,
+                            animateOut: "slideOutRight",
+                            animateIn: "slideInLeft"
+                        },
+                        600: {
+                            items: 1,
+                            loop: true,
+                            autoplayTimeout: 3000,
+                            animateOut: "slideOutRight",
+                            animateIn: "slideInLeft"
+                        },
+                        1000: {
+                            items: 3,
+                            loop: true,
+                            autoplayTimeout: 3000
+                        }
+                    }
+                } );
+
+
+            } );
+
+
+
+        </script>
+        <script type="text/javascript">
+            $( document ).ready( function () {
+
+            } );
+            function next() {
+                $( '#about-owl .owl-next' ).trigger( 'click' );
+            }
+            function prev() {
+                $( '#about-owl .owl-prev' ).trigger( 'click' );
+            }
+
+            function next1() {
+                $( '#why_owl .owl-next' ).trigger( 'click' );
+            }
+            function prev1() {
+                $( '#why_owl .owl-prev' ).trigger( 'click' );
+            }
+        </script>
+
+
+        <script>
+            new WOW().init();
+        </script>
+
+        <script>
+
+        </script>
+
+
+        <!--script for scroll down-->
+        <script>
+            var btn = $( '.scroll-down-text' );
+            $( window ).scroll( function () {
+                if ( $( window ).scrollTop() > ( $( document ).height() - 1400 ) ) {
+                    btn.addClass( 'show' );
+                    console.log( $( window ).scrollTop() );
+                } else {
+                    btn.removeClass( 'show' );
+                    console.log( "fg1" )
+                }
+            } );
+        </script>
+
+
+
+
+
+
+        <iframe id="nr-ext-rsicon"
+            style="position: absolute; display: none; width: 50px; height: 50px; z-index: 2147483647; border-style: none; background: transparent; top: 303px; left: 304px;"></iframe>
+        <style type="text/css">
+            .txt-rotate>.wrap {
+                border-right: 0.08em solid #666
+            }
+
+        </style>
+    </body>
+    <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
