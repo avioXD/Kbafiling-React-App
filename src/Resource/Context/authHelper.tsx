@@ -1,6 +1,6 @@
 import jwt_decode from "jwt-decode";
 
-const USER_TOKEN = "GHJKSLGOIII@*(&!&%&%*#(!(*#&&!IJKFJLHG)))";
+const USER_TOKEN_NAME = "GHJKSLGOIII@*(&!&%&%*#(!(*#&&!IJKFJLHG)))";
 const tokenValidate = (token) => {
   const decoded: any = jwtDecode(token);
   const currentTime = Date.now() / 1000;
@@ -11,11 +11,11 @@ const tokenValidate = (token) => {
 };
 
 export const setLocalUserToken = (token) => {
-  localStorage.setItem(USER_TOKEN, token);
+  localStorage.setItem(USER_TOKEN_NAME, token);
 };
 
 export const getLocalUserToken = () => {
-  const token = localStorage.getItem(USER_TOKEN);
+  const token = localStorage.getItem(USER_TOKEN_NAME);
   const validate = tokenValidate(token);
   if (validate) {
     return token;
@@ -24,15 +24,19 @@ export const getLocalUserToken = () => {
 };
 
 export const removeLocalUserToken = () => {
-  localStorage.removeItem(USER_TOKEN);
+  localStorage.removeItem(USER_TOKEN_NAME);
 };
 export const jwtDecode = (token) => {
-  return jwt_decode(token);
+  if (token) {
+    return jwt_decode(token);
+  }
+  return "";
 };
 export const getLocalUser = () => {
-  const token = getLocalUserToken();
+  const token: any = getLocalUserToken();
   if (token) {
-    return jwtDecode(token);
+    const decoded: any = jwtDecode(token);
+    return decoded.user;
   }
   return null;
 };

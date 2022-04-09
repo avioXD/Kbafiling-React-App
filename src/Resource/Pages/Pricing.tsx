@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Card, Col } from "react-bootstrap";
 import PricingCard from "./Components/PageParts/PricingCards";
 import { default as Checkmark } from "../../assets/svg/checkmark.svg";
@@ -6,7 +6,12 @@ import { Other_Service } from "../../content/OtherServices";
 import HowWeWork from "./Components/PageParts/HowWeWork";
 import RequestToUs from "./Components/PageParts/RequestToUs";
 import { useNavigate } from "react-router-dom";
+import { getAllService } from "../API/common_api.service";
 function groupBy(list, keyGetter) {
+  getAllService().then((res) => {
+    list = [...list, ...res.data.services];
+  });
+
   const map = new Map();
   list.forEach((item) => {
     const key = keyGetter(item);
@@ -23,15 +28,16 @@ function groupBy(list, keyGetter) {
   });
   return arr;
 }
+
 let grouped = groupBy(Other_Service, (item) => item.type);
 
 function Pricing() {
+  useEffect(() => {}, []);
   const navigate = useNavigate();
   const onNavigate = (_id) => navigate(`/pricing/category/${_id}`);
   return (
     <Container fluid>
       <PricingCard />
-
       <Container className="mx-auto mt-5 mb-3  ">
         <h2 className="text-divider title-secondary text-primary">
           All plans include

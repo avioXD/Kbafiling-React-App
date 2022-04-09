@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Offcanvas, Button } from "react-bootstrap";
 import {
   FaHome,
@@ -9,68 +9,80 @@ import {
   FaFolder,
   FaUserFriends,
 } from "react-icons/fa";
-import { Route, Routes, useNavigate, Link, Outlet } from "react-router-dom";
+import { useNavigate, Link, Outlet, useLocation } from "react-router-dom";
 import { default as threebar } from "../../../assets/images/menu.svg";
-import LandingPage from "./Pages/Landing";
+let radios = [
+  {
+    name: "Dashboard",
+    value: "dashboard",
+    navigate: "/dashboard/landing ",
+    Icon: <FaHome />,
+  },
+  {
+    name: "Profile",
+    value: "profile",
+    navigate: "/dashboard/profile",
+    Icon: <FaUser />,
+  },
+  {
+    name: "Notifications",
+    value: "notifications",
+    navigate: "/dashboard/notifications",
+    Icon: <FaBell />,
+  },
+  {
+    name: "Upload",
+    value: "uploadfiles",
+    navigate: "/dashboard/uploadfiles",
+    Icon: <FaFileUpload />,
+  },
+  {
+    name: "My Purchases",
+    value: "purchases",
+    navigate: "/dashboard/purchases",
+    Icon: <FaCartArrowDown />,
+  },
+  {
+    name: "Folder",
+    value: "folder",
+    navigate: "/dashboard/folder",
+    Icon: <FaFolder />,
+  },
+  {
+    name: "Refer & Earn",
+    value: "refer&Earn",
+    navigate: "/dashboard/refer&Earn",
+    Icon: <FaUserFriends />,
+  },
+];
 
 function DashboardIndex() {
-  return (
-    <Routes>
-      <Route path="/" element={<DashboardLayout />}>
-        <Route index element={<LandingPage />} />
-        <Route path="/landing" element={<LandingPage />} />
-        {/* <Route path="messages" element={<Messages />} /> */}
-      </Route>
-    </Routes>
-  );
-}
-
-function DashboardLayout() {
   const [radioValue, setRadioValue] = useState("dashboard");
-  let radios = [
-    {
-      name: "Dashboard",
-      value: "dashboard",
-      navigate: "/dashboard/landing ",
-      Icon: <FaHome />,
-    },
-    {
-      name: "Profile",
-      value: "profile",
-      navigate: "/dashboard/Profile",
-      Icon: <FaUser />,
-    },
-    {
-      name: "Notifications",
-      value: "notifications",
-      navigate: "/dashboard/Notifications",
-      Icon: <FaBell />,
-    },
-    {
-      name: "Upload",
-      value: "upload",
-      navigate: "/dashboard/DashboardHome",
-      Icon: <FaFileUpload />,
-    },
-    {
-      name: "My Purchases",
-      value: "purchases",
-      navigate: "/dashboard/My-Purchases",
-      Icon: <FaCartArrowDown />,
-    },
-    {
-      name: "Folder",
-      value: "folder",
-      navigate: "/dashboard/Folder",
-      Icon: <FaFolder />,
-    },
-    {
-      name: "Refer & Earn",
-      value: "refer&Earn",
-      navigate: "/dashboard/refer&Earn",
-      Icon: <FaUserFriends />,
-    },
-  ];
+  const location = useLocation();
+  useEffect(() => {
+    console.log(location.pathname);
+    if (location.pathname === "/dashboard") {
+      setRadioValue("dashboard");
+    } else if (location.pathname === "/dashboard/orders") {
+      setRadioValue("orders");
+    } else if (location.pathname === "/dashboard/users") {
+      setRadioValue("users");
+    } else if (location.pathname === "/dashboard/settings") {
+      setRadioValue("settings");
+    } else if (location.pathname === "/dashboard/profile") {
+      setRadioValue("profile");
+    } else if (location.pathname === "/dashboard/notifications") {
+      setRadioValue("notifications");
+    } else if (location.pathname === "/dashboard/uploadfiles") {
+      setRadioValue("uploadfiles");
+    } else if (location.pathname === "/dashboard/purchases") {
+      setRadioValue("purchases");
+    } else if (location.pathname === "/dashboard/folder") {
+      setRadioValue("folder");
+    } else if (location.pathname === "/dashboard/refer&Earn") {
+      setRadioValue("refer&Earn");
+    }
+  }, [location?.pathname]);
   const navigate = useNavigate();
   const navigateTo = (path) => {
     navigate(path);
@@ -78,9 +90,10 @@ function DashboardLayout() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   return (
-    <Container fluid className="c-background mb-1 ">
-      <div className="sidebar p-2  mt-4">
+    <Container fluid className="c-background ">
+      <div className="sidebar p-2  mt-2">
         <img src={threebar} alt="" className="img-icon" onClick={handleShow} />
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
@@ -99,13 +112,15 @@ function DashboardLayout() {
                       radioValue === radio.value ? "active" : ""
                     }`}
                     id={`radio-${idx}`}
+                    onClick={() => {
+                      setRadioValue(radio.value);
+                      navigateTo(radio.navigate);
+                    }}
                   >
-                    <Link to={radio.navigate}>
-                      <p>
-                        <span className="icon">{radio.Icon}</span>
-                        <span className="title">{radio.name}</span>
-                      </p>
-                    </Link>
+                    <p>
+                      <span className="icon">{radio.Icon}</span>
+                      <span className="title">{radio.name}</span>
+                    </p>
                   </li>
                 ))}
               </ul>
@@ -113,7 +128,7 @@ function DashboardLayout() {
           </Offcanvas.Body>
         </Offcanvas>
       </div>
-      <Container className="mx-auto p-2 d-flex mb-5">
+      <Container fluid className="mx-auto p-2 d-flex mb-5">
         <div className="navigation">
           <ul>
             {radios.map((radio, idx) => (
@@ -134,7 +149,7 @@ function DashboardLayout() {
             ))}
           </ul>
         </div>
-        <Container className="dashboard-container p-2">
+        <Container fluid className="dashboard-container p-2 bg-light">
           <Outlet />
         </Container>
       </Container>

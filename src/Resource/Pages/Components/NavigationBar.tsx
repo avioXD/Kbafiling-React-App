@@ -1,8 +1,18 @@
-import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import React, { useState } from "react";
+import {
+  Button,
+  Container,
+  Nav,
+  Navbar,
+  OverlayTrigger,
+  Popover,
+} from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
+import { Avatar } from "primereact/avatar";
+import { ImCodepen, ImUser, ImExit } from "react-icons/im";
 function NavigationBar() {
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const navigateToLogin = () => {
     navigate("/login");
@@ -48,7 +58,69 @@ function NavigationBar() {
                 <AuthContext.Consumer>
                   {(context) => {
                     if (context.isAuthenticated) {
-                      return <></>;
+                      let sn = context.user?.name.split(" ");
+
+                      return (
+                        <div className=" mx-4 flex-start  flex-column  ">
+                          <OverlayTrigger
+                            show={show}
+                            placement="bottom"
+                            overlay={
+                              <Popover
+                                id="popover-basic "
+                                className="  flex-start flex-column p-0  border-0 shadow-lg"
+                              >
+                                <Nav
+                                  className="my-2  flex-start "
+                                  navbarScroll
+                                  onClick={() => {
+                                    setShow(!show);
+                                  }}
+                                >
+                                  <Link
+                                    className="nav-link  text-start"
+                                    to="/dashboard/profile"
+                                  >
+                                    <ImUser /> profile
+                                  </Link>
+                                  <Link
+                                    className="nav-link  text-start"
+                                    to="/dashboard"
+                                  >
+                                    <ImCodepen /> Dashboard
+                                  </Link>
+                                  <Link
+                                    className="nav-link  text-start"
+                                    onClick={() => context.logout()}
+                                    to="/home"
+                                  >
+                                    <ImExit /> logout
+                                  </Link>
+                                </Nav>
+                              </Popover>
+                            }
+                          >
+                            <Avatar
+                              className="mr-2"
+                              size="large"
+                              onClick={() => setShow(!show)}
+                              style={{
+                                //  padding: "0.5rem",
+                                background: `linear-gradient(
+                                90deg,
+                                rgba(170, 42, 61, 1) 1%,
+                                rgba(214, 57, 81, 1) 52%,
+                                rgba(255, 133, 77, 1) 100%
+                              )`,
+                                color: "#ffffff",
+                                fontzize: "0.6rem",
+                              }}
+                              shape="circle"
+                              icon="pi pi-user"
+                            />
+                          </OverlayTrigger>
+                        </div>
+                      );
                     } else {
                       return (
                         <div>

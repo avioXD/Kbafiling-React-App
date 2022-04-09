@@ -23,7 +23,7 @@ export const Other_Service = [
         label: `Details of salary payments along with TDS deduction details. Fill in all the required details in the template for Form 24Q. Template can be downloaded from 'Resource' page`,
       },
       {
-        label: `Copy of challans used for tax payments`,
+        label: `Copy of challahs used for tax payments`,
       },
       {
         label: `Acknowledgement copy of last quarterly return filed`,

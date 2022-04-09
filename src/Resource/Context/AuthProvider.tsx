@@ -6,20 +6,28 @@ import {
   getLocalUserToken,
   removeLocalUserToken,
   setLocalUserToken,
-} from "./AuthStore";
+} from "./authHelper";
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
-const Provider = (props) => {
+const AuthProvider = (props) => {
+  const showToast = toast;
   const [isAuthenticated, setIsAuthenticated] = useState(
     getLocallyAuthenticated()
   );
+
   const [user, setUser] = useState(getLocalUser());
   const [token, setToken] = useState(getLocalUserToken());
+  const navigate = useNavigate();
 
+  const navigateTo = (path) => {
+    navigate(path);
+  };
   const login = (user, token) => {
-    setUser(user);
     setToken(token);
     setLocalUserToken(token);
     setIsAuthenticated(true);
+    setUser(getLocalUser());
   };
 
   const logout = () => {
@@ -37,11 +45,24 @@ const Provider = (props) => {
         token,
         login,
         logout,
+        showToast,
+        navigateTo,
       }}
     >
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       {props.children}
     </AuthContext.Provider>
   );
 };
 
-export default Provider;
+export default AuthProvider;
