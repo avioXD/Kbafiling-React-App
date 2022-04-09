@@ -3,7 +3,7 @@ import { Container, Card, Row, Col, Form, Button } from "react-bootstrap";
 import { ImProfile } from "react-icons/im";
 import { GiConfirmed } from "react-icons/gi";
 import AuthContext from "../../../Context/AuthContext";
-import { Save } from "react-ionicons";
+
 import { updateUser } from "../../../API/common_api.service";
 function Profile() {
   const { user, login, showToast } = React.useContext(AuthContext);
