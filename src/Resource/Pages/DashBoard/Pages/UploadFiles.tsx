@@ -18,7 +18,7 @@ function UploadFiles() {
                     <Form.Label>
                       <FaFileSignature /> Name the file
                     </Form.Label>
-                    <Form.Control type="text" placeholder="Name" />
+                    <Form.Control type="text" placeholder="File Name" />
                   </Form.Group>
                   <Form.Group className="mb-3 mx-2" controlId="formBasicEmail">
                     <Form.Label>
