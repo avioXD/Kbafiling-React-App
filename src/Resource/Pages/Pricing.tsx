@@ -73,7 +73,7 @@ function Pricing() {
         <Row className="p-2">
           {grouped.map((val) => {
             return (
-              <Col sm={3}>
+              <Col sm={4}>
                 <Card className="card-list-group">
                   <Card.Header>{val[0].type}</Card.Header>
                   <Card.Body className="p-0">
@@ -82,7 +82,9 @@ function Pricing() {
                         className="item"
                         onClick={() => onNavigate(item._id)}
                       >
-                        {item.label}
+                        <div className="flex-between ">
+                          <p> {item.label}</p>₹{item.price}
+                        </div>
                       </div>
                     ))}
                   </Card.Body>

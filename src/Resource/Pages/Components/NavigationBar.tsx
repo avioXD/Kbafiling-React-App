@@ -101,7 +101,7 @@ function NavigationBar() {
                             }
                           >
                             <Avatar
-                              className="mr-2"
+                              className="mr-2 shadow "
                               size="large"
                               onClick={() => setShow(!show)}
                               style={{
