@@ -1,8 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Container, Card, Table, Button } from "react-bootstrap";
-import { ImBriefcase } from "react-icons/im";
-import { getUserPurchases } from "../../../API/common_api.service";
+import React, { useContext, useEffect, useState } from "react";
+import { Container, Card, Table } from "react-bootstrap";
+import { GoPackage } from "react-icons/go";
+import { getUserOrders } from "../../../API/common_api.service";
 import AuthContext from "../../../Context/AuthContext";
+import { format } from "date-fns";
 import { Skeleton } from "primereact/skeleton";
 const notifications = [
   {
@@ -10,32 +11,31 @@ const notifications = [
     date: "2020-01-01",
     service: "This is a service",
     planname: "planname.pdf",
-    price: "price",
+    status: "status",
   },
   {
     id: 2,
     date: "2020-01-01",
     service: "This is a service",
     planname: "planname.pdf",
-    price: "price",
+    status: "status",
   },
   {
     id: 3,
     date: "2020-01-01",
     service: "This is a service",
     planname: "planname.pdf",
-    price: "price",
+    status: "status",
   },
 ];
-function Purchases() {
+function OrderStatus() {
   const { user, showToast } = useContext(AuthContext);
-  const [purchases, setPurchases] = useState(null);
+  const [orders, setOrders] = useState(null);
   useEffect(() => {
-    getUserPurchases(user.id)
+    getUserOrders(user.id)
       .then((res) => {
         if (res.status === 200) {
-          console.log(res.data.purchases);
-          setPurchases(res.data.purchases);
+          setOrders(res.data.orders);
         }
       })
       .catch((err) => {
@@ -43,30 +43,32 @@ function Purchases() {
       });
   }, []);
   return (
-    <Container fluid className="p-1">
+    <Container fluid className="p-1 ">
       <Container className="mx-auto p-2">
         <p className="text-primary mb-4 h-2 animate-char-dark p-3">
-          <ImBriefcase /> My Purchases
+          <GoPackage /> Order Status
         </p>
-        <Card className="card-list-group">
+        <Card className="card-list-group  ">
           <Card.Body className="p-3">
             <Table hover className="text-center">
               <thead className="c-background text-white">
                 <tr>
+                  <th>Id</th>
                   <th>Date</th>
                   <th>Service</th>
                   <th>Plan Name</th>
-                  <th>Price</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
-                {purchases ? (
-                  purchases.map((n) => (
+                {orders ? (
+                  orders.map((n) => (
                     <tr className="text-between">
-                      <td>{n.date}</td>
+                      <td>{n.id}</td>
+                      <td>{format(new Date(n.date), "yyyy-MM-dd, hh:mm")}</td>
                       <td>{n.service}</td>
                       <td className="cursor-pointer">{n.planname}</td>
-                      <td> ₹{n.price}</td>
+                      <td>{n.status}</td>
                     </tr>
                   ))
                 ) : (
@@ -86,6 +88,9 @@ function Purchases() {
                         <td>
                           <Skeleton width="100%" className="mb-2"></Skeleton>
                         </td>
+                        <td>
+                          <Skeleton width="100%" className="mb-2"></Skeleton>
+                        </td>
                       </tr>
                     ))}
                   </>
@@ -99,4 +104,4 @@ function Purchases() {
   );
 }
 
-export default Purchases;
+export default OrderStatus;

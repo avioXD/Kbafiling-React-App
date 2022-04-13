@@ -28,6 +28,7 @@ import UploadFiles from "./Pages/DashBoard/Pages/UploadFiles";
 import Purchases from "./Pages/DashBoard/Pages/Purchases";
 import Folder from "./Pages/DashBoard/Pages/Folder";
 import PageNotFound from "./Pages/PageNotFound";
+import OrderStatus from "./Pages/DashBoard/Pages/OrderStatus";
 
 const ScrollToTop = (props) => {
   const location = useLocation();
@@ -69,6 +70,7 @@ export const RouteComponent = () => {
                   <Route path="profile" element={<Profile />} />
                   <Route path="notifications" element={<Notification />} />
                   <Route path="uploadfiles" element={<UploadFiles />} />
+                  <Route path="orderstatus" element={<OrderStatus />} />
                   <Route path="purchases" element={<Purchases />} />
                   <Route path="folder" element={<Folder />} />
                 </Route>

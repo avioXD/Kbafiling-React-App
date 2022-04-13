@@ -8,6 +8,7 @@ import {
   FaCartArrowDown,
   FaFolder,
   FaUserFriends,
+  FaTag,
 } from "react-icons/fa";
 import { useNavigate, Link, Outlet, useLocation } from "react-router-dom";
 import { default as threebar } from "../../../assets/images/menu.svg";
@@ -40,6 +41,12 @@ let radios = [
     name: "My Purchases",
     value: "purchases",
     navigate: "/dashboard/purchases",
+    Icon: <FaTag />,
+  },
+  {
+    name: "Order Status",
+    value: "orderstatus",
+    navigate: "/dashboard/orderstatus",
     Icon: <FaCartArrowDown />,
   },
   {

@@ -1,21 +1,41 @@
 import React from "react";
 import { Container, Card, Row, Col, Form, Button } from "react-bootstrap";
 import { ImProfile } from "react-icons/im";
-import { GiConfirmed } from "react-icons/gi";
 import AuthContext from "../../../Context/AuthContext";
-
 import { updateUser } from "../../../API/common_api.service";
+const regex = {
+  email:
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+  password:
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+  phone: /^\d{10}$/,
+  name: /^[a-zA-Z ]{2,30}$/,
+};
 function Profile() {
   const { user, login, showToast } = React.useContext(AuthContext);
   const [creds, setCreds] = React.useState({
     ...user,
     org_type: "",
-    company_name: "",
+    company: "",
     address: "",
+    whatsapp_no: "",
   });
   const [editable, setEditable] = React.useState(false);
+  const onBlur = (obj: any) => {
+    const key = Object.keys(obj)[0] as string;
+    console.log(key);
+    if (creds[key].match(regex[key]) && creds[key] !== "") {
+      document.getElementById(key).classList.remove("is-invalid");
+    } else {
+      document.getElementById(key).classList.add("is-invalid");
+    }
+  };
+  const handleChange = (obj) => {
+    setCreds({ ...creds, ...obj });
+  };
   const onSave = () => {
     if (editable) {
+      console.log(creds);
       updateUser(creds)
         .then((res) => {
           if (res.status === 200) {
@@ -39,9 +59,9 @@ function Profile() {
     <Container fluid className="p-1">
       <Container className="mx-auto p-2">
         <Card className="card-list-group p-4">
-          <h3 className="text-primary mb-4 p-3">
+          <p className="text-primary mb-4 h-2 animate-char-dark p-3">
             <ImProfile /> Profile
-          </h3>
+          </p>
           <Card.Body className="p-3  ">
             <Form>
               <Row>
@@ -58,8 +78,8 @@ function Profile() {
                       type="text"
                       placeholder="Name"
                       value={creds.name}
-                      // onChange={(e) => handleChange({ name: e.target.value })}
-                      // onBlur={(e) => onBlur({ name: e.target.value })}
+                      onChange={(e) => handleChange({ name: e.target.value })}
+                      onBlur={() => onBlur({ name: creds.name })}
                     />
                   </Form.Group>
                 </Col>
@@ -77,8 +97,8 @@ function Profile() {
                       type="text"
                       placeholder="Email"
                       value={creds.email}
-                      // onChange={(e) => handleChange({ name: e.target.value })}
-                      // onBlur={(e) => onBlur({ name: e.target.value })}
+                      onChange={(e) => handleChange({ email: e.target.value })}
+                      onBlur={() => onBlur({ email: creds.email })}
                     />
                   </Form.Group>
                 </Col>
@@ -95,8 +115,8 @@ function Profile() {
                       type="text"
                       placeholder="Mobile No."
                       value={"+91 " + creds.phone}
-                      // onChange={(e) => handleChange({ name: e.target.value })}
-                      // onBlur={(e) => onBlur({ name: e.target.value })}
+                      onChange={(e) => handleChange({ phone: e.target.value })}
+                      onBlur={() => onBlur({ phone: creds.phone })}
                     />
                   </Form.Group>
                 </Col>
@@ -112,9 +132,11 @@ function Profile() {
                       disabled={!editable}
                       type="text"
                       placeholder="Whatsapp No."
-                      value={"+91 " + creds.phone}
-                      // onChange={(e) => handleChange({ name: e.target.value })}
-                      // onBlur={(e) => onBlur({ name: e.target.value })}
+                      value={creds.whatsapp_no}
+                      onChange={(e) =>
+                        handleChange({ whatsapp_no: e.target.value })
+                      }
+                      onBlur={() => onBlur({ whatsapp_no: creds.whatsapp_no })}
                     />
                   </Form.Group>
                 </Col>
@@ -133,8 +155,10 @@ function Profile() {
                       rows={2}
                       placeholder="Company Name"
                       value={creds.company_name}
-                      // onChange={(e) => handleChange({ name: e.target.value })}
-                      // onBlur={(e) => onBlur({ name: e.target.value })}
+                      onChange={(e) =>
+                        handleChange({ company: e.target.value })
+                      }
+                      onBlur={() => onBlur({ company: creds.company })}
                     />
                   </Form.Group>
                 </Col>
@@ -151,8 +175,10 @@ function Profile() {
                       type="text"
                       placeholder="Organisation type"
                       value={creds.org_type}
-                      // onChange={(e) => handleChange({ name: e.target.value })}
-                      // onBlur={(e) => onBlur({ name: e.target.value })}
+                      onChange={(e) =>
+                        handleChange({ org_type: e.target.value })
+                      }
+                      onBlur={() => onBlur({ org_type: creds.org_type })}
                     />
                   </Form.Group>
                 </Col>
@@ -171,8 +197,10 @@ function Profile() {
                       rows={3}
                       placeholder="Address"
                       value={creds.address}
-                      // onChange={(e) => handleChange({ name: e.target.value })}
-                      // onBlur={(e) => onBlur({ name: e.target.value })}
+                      onChange={(e) =>
+                        handleChange({ address: e.target.value })
+                      }
+                      onBlur={() => onBlur({ address: creds.address })}
                     />
                   </Form.Group>
                 </Col>

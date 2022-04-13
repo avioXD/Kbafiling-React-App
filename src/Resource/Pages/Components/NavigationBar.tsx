@@ -58,8 +58,6 @@ function NavigationBar() {
                 <AuthContext.Consumer>
                   {(context) => {
                     if (context.isAuthenticated) {
-                      let sn = context.user?.name.split(" ");
-
                       return (
                         <div className=" mx-4 flex-start  flex-column  ">
                           <OverlayTrigger
