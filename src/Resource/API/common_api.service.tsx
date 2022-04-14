@@ -15,6 +15,14 @@ export const getUserPurchases = (id) => {
 export const getUserOrders = (id) => {
   return axios.get(`/api/v1/user/order/${id}`);
 };
-export const uploadFiles = (files) => {
-  return axios.post("/api/v1/upload", files);
+export const uploadFiles = (files, id) => {
+  return axios.post(`/api/v1/upload/${id}`, files);
+};
+export const getFiles = (id) => {
+  return axios.get(`/api/v1/upload/${id}`);
+};
+export const onDownloadFile = (id) => {
+  return axios.get(`/api/v1/upload/file/${id}`, {
+    responseType: "blob",
+  });
 };

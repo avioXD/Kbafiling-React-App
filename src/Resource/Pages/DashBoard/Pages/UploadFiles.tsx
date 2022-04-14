@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
 import Uploader from "../../Components/PageParts/Uploader";
 import { ImLock } from "react-icons/im";
 import { FaFileSignature } from "react-icons/fa";
+import { uploadFiles } from "../../../API/common_api.service";
+import AuthContext from "../../../Context/AuthContext";
 function UploadFiles() {
+  const { showToast, user } = React.useContext(AuthContext);
   const [data, setData] = useState([
     {
       name: "",
@@ -37,7 +40,13 @@ function UploadFiles() {
         formData.append(`password${idx}`, item.password);
       }
     });
-    console.log(formData);
+    uploadFiles(formData, user.id)
+      .then((res) => {
+        showToast("Upload Successful", { type: "success" });
+      })
+      .catch((err) => {
+        showToast("Upload Failed", { type: "error" });
+      });
   };
   return (
     <Container fluid>
