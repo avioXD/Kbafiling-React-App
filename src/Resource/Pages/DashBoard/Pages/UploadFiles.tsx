@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Form, Card } from "react-bootstrap";
+import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
 import Uploader from "../../Components/PageParts/Uploader";
 import { ImLock } from "react-icons/im";
 import { FaFileSignature } from "react-icons/fa";
@@ -26,16 +26,30 @@ function UploadFiles() {
       file: null,
     },
   ]);
+
+  const onUpload = () => {
+    console.log(data);
+    const formData = new FormData();
+    data.forEach((item, idx) => {
+      if (item.file) {
+        formData.append(`file${idx}`, item.file);
+        formData.append(`name${idx}`, item.name);
+        formData.append(`password${idx}`, item.password);
+      }
+    });
+    console.log(formData);
+  };
   return (
     <Container fluid>
       <Container className="mx-auto p-2">
         <Row>
-          {[0, 1, 2, 3].map((item, i) => (
+          {data.map((item, i) => (
             <Col sm={6}>
               <Card className="card-list-group">
                 <Card.Header>Upload Files</Card.Header>
                 <Card.Body>
                   <Uploader
+                    maxSize={5000000}
                     value={data[i].file}
                     setRequireFile={(file) => {
                       setData((data) => {
@@ -49,7 +63,6 @@ function UploadFiles() {
                         ];
                       });
                     }}
-                    label={"Upload"}
                     filetype="file"
                   ></Uploader>
                   <Form.Group className="mb-3 mx-2" controlId={`${i}formName`}>
@@ -71,7 +84,9 @@ function UploadFiles() {
                         });
                       }}
                       type="text"
+                      autoComplete="off"
                       placeholder="File Name"
+                      name={`name${i}`}
                     />
                   </Form.Group>
                   <Form.Group
@@ -97,6 +112,7 @@ function UploadFiles() {
                       }}
                       type="password"
                       placeholder="Password"
+                      name={`password${i}`}
                     />
                   </Form.Group>
                 </Card.Body>
@@ -104,6 +120,11 @@ function UploadFiles() {
             </Col>
           ))}
         </Row>
+        <div className="flex-center my-3">
+          <Button variant="primary" className="m-btn" onClick={onUpload}>
+            Upload
+          </Button>
+        </div>
       </Container>
     </Container>
   );

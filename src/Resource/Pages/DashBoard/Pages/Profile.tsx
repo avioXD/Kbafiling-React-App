@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Card, Row, Col, Form, Button } from "react-bootstrap";
 import { ImProfile } from "react-icons/im";
 import AuthContext from "../../../Context/AuthContext";
@@ -15,11 +15,14 @@ function Profile() {
   const { user, login, showToast } = React.useContext(AuthContext);
   const [creds, setCreds] = React.useState({
     ...user,
-    org_type: "",
-    company: "",
-    address: "",
-    whatsapp_no: "",
+    org_type: user.org_type ? user.org_type : "",
+    company: user.company ? user.company : "",
+    address: user.address ? user.address : "",
+    whatsapp_no: user.whatsapp_no ? user.whatsapp_no : "",
   });
+  useEffect(() => {
+    setCreds(user);
+  }, [user]);
   const [editable, setEditable] = React.useState(false);
   const onBlur = (obj: any) => {
     const key = Object.keys(obj)[0] as string;
@@ -39,7 +42,7 @@ function Profile() {
       updateUser(creds)
         .then((res) => {
           if (res.status === 200) {
-            login({ ...user, ...res.data.user }, res.data.token);
+            login(res.data.user, res.data.token);
             showToast("Update Successful", {
               type: "success",
             });

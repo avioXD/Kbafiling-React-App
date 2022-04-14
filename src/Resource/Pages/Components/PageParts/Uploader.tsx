@@ -28,7 +28,19 @@ const Type = {
     "application/msword",
     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
   ],
-  file: ["*"],
+  file: [
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "image/jpeg",
+    "image/png",
+    "image/jpg",
+    "video/mp4",
+    "video/mkv",
+    "video/WMV",
+    "video/AVI",
+    "video/MOV",
+  ],
   pdf: ["application/pdf"],
   zip: ["application/zip"],
   folder: [
@@ -82,8 +94,8 @@ function Uploader(props) {
         <Card className="p-3 border bg-light">
           <Card.Title className="text ">
             <div className="my-2 text-primary ">
-              <ImFolderUpload />
-              {props.label ? props.label : "Upload Document"}{" "}
+              {/* <ImFolderUpload /> */}
+              {props.label ? props.label : ""}
               {props.important ? <span className="required">*</span> : null}
             </div>
           </Card.Title>
@@ -113,8 +125,8 @@ function Uploader(props) {
         <Card className="border ">
           <Card.Title className="text mt-2 mb-0">
             <div className="my-2 text-start   mx-4  ">
-              <ImFolderUpload className="text-primary mx-2  " />
-              {props.label ? props.label : "Upload Document"}
+              {/* <ImFolderUpload className="text-primary mx-2  " /> */}
+              {props.label ? props.label : ""}
               {props.important ? <span className="required">*</span> : null}
             </div>
           </Card.Title>

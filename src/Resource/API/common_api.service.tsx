@@ -15,3 +15,6 @@ export const getUserPurchases = (id) => {
 export const getUserOrders = (id) => {
   return axios.get(`/api/v1/user/order/${id}`);
 };
+export const uploadFiles = (files) => {
+  return axios.post("/api/v1/upload", files);
+};
