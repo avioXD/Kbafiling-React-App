@@ -22,38 +22,73 @@ function NavigationBar() {
   };
   return (
     <>
-      <Container fluid className="flex-center ">
-        <Container className="mx-2">
+      <Container
+        fluid
+        className="flex-center shadow-sm "
+        style={{ zIndex: "5", overflow: "visible" }}
+      >
+        <Container className="mx-2" style={{ overflow: "visible" }}>
           <Navbar bg="light" expand="lg">
-            <Navbar.Brand>
-              <Link to="/" className="title-primary h-2 animate-char-dark">
+            <Navbar.Brand className="title-primary logo">
+              <Link to="/" className="h-2 ">
                 {" "}
-                Kbiafiling
+                Kba filing
               </Link>
+              <p>YOU GROW WE GROW</p>
             </Navbar.Brand>
             <Navbar.Toggle
               className="custom-toggler"
               aria-controls="navbarScroll"
             />
             <Navbar.Collapse id="navbarScroll">
-              <Nav className="my-2  flex-center" navbarScroll>
+              <Nav className="my-2  flex-center">
                 <Link className="nav-link" to="/home">
                   Home
                 </Link>
                 <Link className="nav-link" to="/about">
-                  About Us
+                  <div className="dropdown">
+                    <span> About Us </span>
+                    <div className="dropdown-content">
+                      <p>
+                        {" "}
+                        <Link to="/pricing">Who are we</Link>
+                      </p>
+                      <p>
+                        {" "}
+                        <Link to="/home">Our Team</Link>
+                      </p>
+                    </div>
+                  </div>
                 </Link>
                 <Link className="nav-link" to="/pricing">
-                  Services & Pricing
+                  <div className="dropdown">
+                    <span> service </span>
+                    <div className="dropdown-content">
+                      <p>
+                        {" "}
+                        <Link to="/pricing">Pricing</Link>
+                      </p>
+                      <p>
+                        {" "}
+                        <Link to="/home">Services</Link>
+                      </p>
+                      <p>
+                        {" "}
+                        <Link to="/resource">Important Links</Link>
+                      </p>
+                      <p>
+                        {" "}
+                        <Link to="/resource">Calender</Link>
+                      </p>
+                    </div>
+                  </div>
                 </Link>
                 <Link className="nav-link" to="#">
-                  Blog
+                  Updates
                 </Link>
+
                 <Link className="nav-link" to="/contact">
                   Contact Us
-                </Link>
-                <Link className="nav-link" to="/resource">
-                  Resources
                 </Link>
                 <AuthContext.Consumer>
                   {(context) => {

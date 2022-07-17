@@ -312,6 +312,38 @@ p {
   font-size: $s-2;
   font-weight: 800;
 }
+.logo {
+  margin-top: 20px;
+  .h-2,
+  .h-1 {
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    background-image: linear-gradient(
+      -225deg,
+      #2b1cff 0%,
+      rgb(77, 255, 255) 15%,
+      #34f574 30%,
+      #1dd2ff 85%,
+      #1d3fff 100%
+    );
+    line-height: 10px;
+  }
+  p {
+    line-height: 2px;
+    font-size: 13px;
+    text-align: right;
+    color: $color-200;
+    font-weight: 600;
+    font-family: $Raleway;
+  }
+}
 .title-primary {
   font-weight: "900";
   color: $white;
@@ -819,32 +851,55 @@ textarea {
 }
 
 ///////////////dropdown
+/// //  DropDown
+
 .dropdown {
   position: relative;
-  z-index: 10;
   display: inline-block;
+  cursor: pointer;
+
   .dropdown-content {
-    display: none;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    span {
-      color: black;
-      padding: 12px 16px;
+    margin-top: 10px;
+    left: -12px;
+
+    background: $card-background-reverse;
+    color: $white;
+    min-width: 10rem;
+    text-align: center;
+    box-shadow: 0px 2px 10px 2px rgba(85, 85, 85, 0.247);
+    padding: 0;
+
+    transform: translateY(50px);
+    transition: all 0.4s;
+    a {
       text-decoration: none;
+      color: $white;
+      cursor: pointer;
+      margin: auto;
       display: block;
+      padding: 0.6rem 0.8rem;
+      font-weight: 400;
+      font-size: 90%;
+      letter-spacing: 1px;
+      text-align: center;
       &:hover {
-        background-color: $color-200;
+        background: $card-background;
+        transform: scale(1.1);
+        filter: brightness(1.2);
+        border: 0.6px solid $white;
       }
     }
   }
   &:hover {
     .dropdown-content {
-      display: block;
-    }
-    .dropbtn {
-      filter: drop-shadow(1px 1px 5px $shadow-1);
+      opacity: 1;
+
+      visibility: visible;
+      transform: translateY(0px);
     }
   }
 }

@@ -14,9 +14,13 @@ function FooterBar() {
         <Row>
           <Col sm={5}>
             <div className="flex-center flex-column  ">
-              <h1 className="title-primary  my-4  animate-char-dark h-1">
-                KBIAFILING
-              </h1>
+              <div className="title-primary logo">
+                <Link to="/" className="h-1 ">
+                  {" "}
+                  Kba filing
+                </Link>
+                <p>YOU GROW WE GROW</p>
+              </div>
             </div>
           </Col>
           <Col sm={3}>
@@ -89,7 +93,7 @@ function FooterBar() {
         <Row>
           <Col sm={4}>
             <p className="text-white  text-center">
-              © 2022 KBIAFILING. All rights reserved
+              © 2022 KBA FILING. All rights reserved
             </p>
           </Col>
           <Col sm={4}>

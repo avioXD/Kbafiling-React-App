@@ -133,24 +133,18 @@ export const Home = () => {
             <Col sm={12} className="d-flex justify-content-center">
               <div className="p-3 my-auto mt-4 ">
                 <p className="title-primary h-1 text-warp text-center animate-char text-uppercase">
-                  Welcome to Kbiafiling
+                  Welcome to <span className="logo"> Kba filing</span>
                 </p>
                 <p className="text-white text-center">
                   Committed towards eminent tax & financial assistance!
                 </p>
                 <div className=" flex-center mt-4">
-                  <Link to={"/pricing"}>
-                    {" "}
-                    <Button variant="thin" className="m-btn">
-                      Plans and Pricing
-                    </Button>
-                  </Link>
                   <Link to={"/contact"}>
                     <Button
                       variant="outline-light"
                       className="m-btn-outline mx-2"
                     >
-                      Get Quotation
+                      Request A Call Back
                     </Button>
                   </Link>
                 </div>
