@@ -6,7 +6,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 function FooterBar() {
   return (
     <Container fluid className="c-background p-3">
@@ -33,17 +33,26 @@ function FooterBar() {
               <Link className="li" to="/about">
                 About Us
               </Link>
+              <Link className="li" to="/contact">
+                Our Team
+              </Link>
               <Link className="li" to="/pricing">
-                Services & Pricing
+                Services
+              </Link>
+              <Link className="li" to="/pricing">
+                Pricing
               </Link>
               <Link className="li" to="#">
-                Blog
+                Updates
               </Link>
               <Link className="li" to="/contact">
                 Contact Us
               </Link>
               <Link className="li" to="/resource">
-                Resources
+                Important link
+              </Link>
+              <Link className="li" to="/resource">
+                Calender
               </Link>
             </ul>
           </Col>
